@@ -1,0 +1,100 @@
+
+body {
+    margin: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
+.main.headers { /* class selector for all main headers */
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 800;
+    color: #4A2C2A;
+    font-size: 30px;
+}
+
+.main.headers.serving-sunshine {
+    margin: 0 0 1rem;
+}
+
+.pretext {
+    font-family: 'Baloo 2', sans-serif;
+    font-weight: 700;
+    color: #4A2C2A;
+    font-size: 10px;
+}
+
+.main.headers.serving-sunshine {
+    margin: 0 0 1rem;
+}
+
+.text.serving-sunshine {
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.serving-sunshine {
+    background-color: #FFCAD4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 440px;
+}
+
+.flavors {
+    background-color: #FFFDF9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 580px;
+}
+
+.churned {
+    background-color: #BDE9D1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    height: 510px;
+}
+
+.peach {
+    background-color: #FEE440;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 300px;
+}
+
+.fanfaves {
+    background-color: #FFFDF9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 370px;
+}
+
+.rewards {
+    background-color: #F2E9FB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 400px;
+}
+
+.smile {
+    background-color: #FFFDF9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    height: 500px;
+}
+
+.footer {
+    background-color: #4A2C2A;
+}
+
