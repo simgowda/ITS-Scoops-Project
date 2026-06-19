@@ -1,63 +1,104 @@
 
+/*----------------- overall structure --------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
 body {
     margin: 0;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@700&display=swap');
-.main.headers { /* class selector for all main headers */
-    font-family: 'Baloo 2', sans-serif;
-    font-weight: 800;
+    font-family: 'Inter', sans-serif;
     color: #4A2C2A;
-    font-size: 30px;
-}
-
-.main.headers.serving-sunshine {
-    margin: 0 0 1rem;
 }
 
 .pretext {
-    font-family: 'Baloo 2', sans-serif;
     font-weight: 700;
-    color: #4A2C2A;
     font-size: 10px;
+    margin-bottom: 2px;
 }
 
-.main.headers.serving-sunshine {
-    margin: 0 0 1rem;
+.main.headers { /* class selector for all main headers */
+    font-weight: 2000;
+    font-size: 30px;
+    margin-top: 2px;
+   margin-bottom: 2px;
 }
 
-.text.serving-sunshine {
+.description {
+    font-weight: 50;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+
+/*----------------- serving sunshine specific overrides ------------*/
+
+.serving-sunshine .text{
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* text blocks on top of e/o */
+}
 
+.serving-sunshine .pretext {
+    
+}
+
+.serving-sunshine .main.headers {
+   
+   
+}
+
+.serving-sunshine .description {
     
 }
 
 .serving-sunshine {
     background-color: #FFCAD4;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: center; /* controls vertical position */
+    justify-content: flex-start;    /* controls horizontal position position (defaults to flex-direction:row) */
     height: 440px;
+    padding-left: 40px;
+    
+}
+
+/*----------------- flavors specific overrides ------------*/
+
+.flavors .text{
+    display: flex;
+    flex-direction: column;
+
+    
+}
+
+.flavors .pretext{
+    margin-bottom: 2px;
+}
+
+.flavors .main.headers{
+    margin-top: 2px;
 }
 
 .flavors {
     background-color: #FFFDF9;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    justify-content: center;
     text-align: center;
-    height: 580px;
+    height: 420px;
+    padding-top: 150px;
+}
+
+/*----------------- churned specific overrides ------------*/
+.churned .text{
+    display: flex;
+    flex-direction: column;
 }
 
 .churned {
     background-color: #BDE9D1;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    display: flex;
+    justify-content: right;
     height: 510px;
 }
+
+/*----------------- peach specific overrides ------------*/
 
 .peach {
     background-color: #FEE440;
@@ -68,6 +109,7 @@ body {
     height: 300px;
 }
 
+/*----------------- fanfaves specific overrides ------------*/
 .fanfaves {
     background-color: #FFFDF9;
     display: flex;
@@ -77,6 +119,7 @@ body {
     height: 370px;
 }
 
+/*----------------- rewards specific overrides ------------*/
 .rewards {
     background-color: #F2E9FB;
     display: flex;
@@ -85,6 +128,7 @@ body {
     height: 400px;
 }
 
+/*----------------- smile specific overrides ------------*/
 .smile {
     background-color: #FFFDF9;
     display: flex;
@@ -94,6 +138,7 @@ body {
     height: 500px;
 }
 
+/*----------------- footer specific overrides ------------*/
 .footer {
     background-color: #4A2C2A;
 }
