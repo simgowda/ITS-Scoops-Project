@@ -7,6 +7,14 @@ body {
     margin: 0;
     /* font-family: 'Inter', sans-serif; */
     color: #4A2C2A;
+    max-width:fit-content;
+}
+
+/* last minute fix for improper website scaling */
+.page-wrapper{
+    width: 950px;
+    transform-origin: top left;
+    transform: scale(calc(100vw / 950px));
 }
 
 .pretext {
@@ -38,6 +46,7 @@ body {
     line-height: 15px;
 }
 
+/* might be useless */
 .buttons {
     font-family: "Lexend Deca", sans-serif;
     font-optical-sizing: auto;
@@ -135,7 +144,7 @@ body {
     
 }
 
-.flavors .card {
+.flavors .card-container .card {
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -143,6 +152,27 @@ body {
     width: 170px;
     height: 270px;
     transition: transform 0.2s ease;
+
+}
+
+.flavors .card-container .card .card-content{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: left;
+    font-size: 11px;
+    margin-left: 15px;
+}
+
+.flavors .card-container .card .card-content .card-labels{
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.flavors .card-container .card .card-content .card-descriptions{
+    font-size: 9px;
+    margin-bottom: 0px;
+    line-height: 14px;
 }
 
 
@@ -165,6 +195,31 @@ body {
 
 .churned .image{
     padding-right: 70px; /*space between image and text */
+}
+
+.churned .tips{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 15px;
+
+    /* tip labels or text */
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.churned .tips .image-tips{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
 }
 
 .churned {
@@ -221,20 +276,63 @@ body {
 }
 
 /*----------------- fanfaves specific overrides ------------*/
+
+.fanfaves .card-container{
+    display: flex;
+    gap: 20px;
+    text-align: left;
+    margin-top: 30px;
+
+}
+
+.fanfaves .card-container .image-star{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.fanfaves .card-container .card{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 250px;
+    height: 150px;
+}
+
+.fanfaves .card-container .card .card-content{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: left;
+    font-size: 11px;
+    margin-left: 15px;
+}
+
 .fanfaves {
     background-color: #FFFDF9;
     display: flex;
-    align-items: flex-start;
-    padding-top: 60px;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
     justify-content: center;
     text-align: center;
-    height: 310px;
+    height: 330px;
 }
 
 /*----------------- rewards specific overrides ------------*/
 
-.rewards .buttons{
+.rewards .reqs{
+    display: flex;
+    align-items: center;
+    gap: 7px;
 
+    /* tip labels or text */
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
 }
 
 .rewards .buttons .btn{
@@ -249,6 +347,7 @@ body {
     height: 35px;
     width: 125px;
     background-color: #4A2C2A;
+    margin-top: 15px;
 }
 
 .rewards {
