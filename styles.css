@@ -25,7 +25,7 @@ body {
     font-weight: 800;
     font-size: 30px;
     margin-top: 2px;
-   margin-bottom: 2px;
+    margin-bottom: 2px;
 }
 
 .description {
@@ -36,6 +36,12 @@ body {
     font-size: 11px;
     margin-top: 3px;
     line-height: 15px;
+}
+
+.buttons {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 
@@ -49,6 +55,37 @@ body {
 .serving-sunshine .buttons{
     display: flex;
     gap: 12px;
+    margin-top: 10px;
+}
+
+.serving-sunshine .buttons .btn{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    border: 6px;
+    border-radius: 20px;
+    height: 35px;
+    width: 125px;
+    background-color: #4A2C2A;
+}
+
+.serving-sunshine .buttons .btn2{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    color: #4A2C2A;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #4A2C2A;
+    border-radius: 20px;
+    height: 35px;
+    width: 100px;
+    background-color: #FFCAD4 ;
 }
 
 .serving-sunshine .image{
@@ -71,7 +108,6 @@ body {
 .flavors .text{
     display: flex;
     flex-direction: column;
-
     
 }
 
@@ -83,14 +119,41 @@ body {
     margin-top: 2px;
 }
 
+.flavors .image {
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.flavors .card-container{
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 100px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    
+}
+
+.flavors .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 170px;
+    height: 270px;
+    transition: transform 0.2s ease;
+}
+
+
 .flavors {
     background-color: #FFFDF9;
     display: flex;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: center;
     text-align: center;
-    height: 420px;
-    padding-top: 150px;
+    height: 570px;
 }
 
 /*----------------- churned specific overrides ------------*/
@@ -108,21 +171,49 @@ body {
     background-color: #BDE9D1;
     display: flex;
     align-items: flex-start;
-    padding-top: 80px;
+    padding-top: 5px;
     justify-content: flex-start;
     padding-left: 60px;
-    height: 430px;
+    height: 440px;
+}
+
+.image-churned{
+    display: flex;
+    flex-direction: column;
 }
 
 /*----------------- peach specific overrides ------------*/
 
+.peach .text .pretext {
+    font-size: 12px;
+    font-weight: 700;
+}
 .peach .main.headers{
     font-size: 40px;
+}
+
+.peach .buttons {
+    margin-top: 10px;
+}
+
+.peach .buttons .btn{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    border: 6px;
+    border-radius: 20px;
+    height: 40px;
+    width: 150px;
+    background-color: #4A2C2A;
 }
 
 .peach {
     background-color: #FEE440;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -141,9 +232,29 @@ body {
 }
 
 /*----------------- rewards specific overrides ------------*/
+
+.rewards .buttons{
+
+}
+
+.rewards .buttons .btn{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    border: 6px;
+    border-radius: 20px;
+    height: 35px;
+    width: 125px;
+    background-color: #4A2C2A;
+}
+
 .rewards {
     background-color: #F2E9FB;
     display: flex;
+    flex-direction: column;
     align-items: flex-start; /* vertical alignment */
     padding-top: 80px;
     justify-content: flex-start; /* horizontal alignment */
