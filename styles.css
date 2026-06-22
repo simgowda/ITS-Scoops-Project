@@ -1,29 +1,41 @@
 
 /*----------------- overall structure --------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500,600,800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap'); /* main header and pretext font */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend+Deca:wght@100..900&display=swap'); /*descriptions font*/
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
     color: #4A2C2A;
 }
 
 .pretext {
-    font-weight: 700;
-    font-size: 10px;
-    margin-bottom: 2px;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    margin-bottom: 3px;
 }
 
 .main.headers { /* class selector for all main headers */
-    font-weight: 2000;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 800;
     font-size: 30px;
     margin-top: 2px;
    margin-bottom: 2px;
 }
 
 .description {
-    font-weight: 50;
-    font-size: 10px;
-    margin-top: 2px;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    margin-top: 3px;
+    line-height: 15px;
 }
 
 
@@ -31,25 +43,22 @@ body {
 
 .serving-sunshine .text{
     display: flex;
-    flex-direction: column; /* text blocks on top of e/o */
+    flex-direction: column; /* text blocks and buttons on top of e/o */
 }
 
-.serving-sunshine .pretext {
-    
+.serving-sunshine .buttons{
+    display: flex;
+    gap: 12px;
 }
 
-.serving-sunshine .main.headers {
-   
-   
-}
-
-.serving-sunshine .description {
-    
+.serving-sunshine .image{
+    padding-left: 70px;
+    padding-top: 95px;
 }
 
 .serving-sunshine {
     background-color: #FFCAD4;
-    display: flex;
+    display: flex; /* horiztonal layout by default*/
     align-items: center; /* controls vertical position */
     justify-content: flex-start;    /* controls horizontal position position (defaults to flex-direction:row) */
     height: 440px;
@@ -88,23 +97,34 @@ body {
 .churned .text{
     display: flex;
     flex-direction: column;
+    margin-top: 30px;
+}
+
+.churned .image{
+    padding-right: 70px; /*space between image and text */
 }
 
 .churned {
     background-color: #BDE9D1;
     display: flex;
-    align-items: center;
-    justify-content: right;
-    height: 510px;
+    align-items: flex-start;
+    padding-top: 80px;
+    justify-content: flex-start;
+    padding-left: 60px;
+    height: 430px;
 }
 
 /*----------------- peach specific overrides ------------*/
+
+.peach .main.headers{
+    font-size: 40px;
+}
 
 .peach {
     background-color: #FEE440;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     height: 300px;
 }
@@ -113,29 +133,44 @@ body {
 .fanfaves {
     background-color: #FFFDF9;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 60px;
+    justify-content: center;
     text-align: center;
-    height: 370px;
+    height: 310px;
 }
 
 /*----------------- rewards specific overrides ------------*/
 .rewards {
     background-color: #F2E9FB;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 400px;
+    align-items: flex-start; /* vertical alignment */
+    padding-top: 80px;
+    justify-content: flex-start; /* horizontal alignment */
+    padding-left: 40px;
+    text-align: left;
+    height: 320px;
 }
 
 /*----------------- smile specific overrides ------------*/
+
+.smile .main.headers{
+}
+
+.smile .image{
+    padding-top: 30px;
+    padding-left: 120px;
+}
 .smile {
     background-color: #FFFDF9;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column; /* makes text and image stack on top of e/o, instead of side by side */
+    align-items: flex-start;
+    padding-top: 60px;
+    justify-content: flex-start;
+    padding-left: 300px;
     text-align: center;
-    height: 500px;
+    height: 440px;
 }
 
 /*----------------- footer specific overrides ------------*/
