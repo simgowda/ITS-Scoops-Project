@@ -350,16 +350,69 @@ body {
     margin-top: 15px;
 }
 
+.rewards .card-container{
+    display: flex;
+    text-align: left;
+}
+
+.scoop-rewards .card-container .card{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 350px;
+    height: 270px;
+    
+    margin-top: 70px;
+    margin-left: 50px;
+}
+
+.scoop-rewards .card-container .card .card-content{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.scoop-rewards .card-container .card .card-content .card-heading{
+    display:flex;
+    align-items: center;
+    gap: 140px;
+/* font used for card*/
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    color: #4A2C2A;
+
+    margin-bottom: 5px;
+}
+
+.scoop-rewards .card-container .card .card-content .card-heading .side-text{
+    font-size: 9px;
+}
+
+.scoop-rewards .card-container .card .card-content .card-heading .subtext{
+    font-size: 8px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+
+
 .rewards {
-    background-color: #F2E9FB;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* vertical alignment */
     padding-top: 80px;
     justify-content: flex-start; /* horizontal alignment */
-    padding-left: 40px;
+    padding-left: 60px;
     text-align: left;
     height: 320px;
+}
+
+.scoop-rewards{
+    display: flex;
+    background-color: #F2E9FB;
 }
 
 /*----------------- smile specific overrides ------------*/
@@ -367,8 +420,43 @@ body {
 .smile .main.headers{
 }
 
+.smile .locations {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    margin-left: -220px;
+
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 10px;
+    
+    
+}
+
+.smile .locations .location{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.smile .locations .address{
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+    gap: 5px;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.smile .locations .directions{
+    font-size: 9px;
+    margin-top: 10px;
+}
+
 .smile .image{
-    padding-top: 30px;
+    margin-top: -160px; /*negative because of default positive padding*/
     padding-left: 120px;
 }
 .smile {
@@ -386,5 +474,48 @@ body {
 /*----------------- footer specific overrides ------------*/
 .footer {
     background-color: #4A2C2A;
+    height: 230px;
+    color: white;
+    display: flex;
+    gap: 350px;
+    padding-left: 50px;
+    padding-top: 30px;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.footer .left-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .left-section .heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.footer .left-section .description{
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.footer .left-section .socials{
+    display: flex;
+    gap: 18px;
+    margin-top: 9px;
+}
+
+.footer .right-section{
+    display: flex;
+    gap: 50px;
+    font-size: 9px;
+}
+
+.footer .right-section .heading{
+    color: #FEE440;
+    font-size: 11px;
 }
 

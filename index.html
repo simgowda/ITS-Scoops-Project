@@ -205,29 +205,66 @@
 
 
 <!--------------------- SCOOP REWARDS --------------------------->
-            <div class="rewards">
-                <div class="text">
-                    <p class="pretext">JOIN THE CLUB</p>
-                    <h1 class="main headers">Scoop Rewards</h1>
-                    <p class="description">Eat ice cream, get free ice cream. It's that simple. Sign up for our loyalty program<br>
-                    and start earning points with every dip.</p>
+            <div class="scoop-rewards">
+<!--made rewards-content and punch-card siblings so that they can sit horizontally in a flex box-->
+                <div class="rewards">
+                    <div class="text">
+                        <p class="pretext">JOIN THE CLUB</p>
+                        <h1 class="main headers">Scoop Rewards</h1>
+                        <p class="description">Eat ice cream, get free ice cream. It's that simple. Sign up for our loyalty program<br>
+                        and start earning points with every dip.</p>
 
-                    
-                    <div class="reqs">
-                        <img src="images/check-circle.png" width="16" height="16">
-                        <p class="reqs">Free scoop on your birthday</p>
+                        
+                        <div class="reqs">
+                            <img src="images/check-circle.png" width="16" height="16">
+                            <p class="reqs">Free scoop on your birthday</p>
+                        </div>
+                        <div class="reqs">
+                            <img src="images/check-circle.png" width="16" height="16">
+                            <p class="reqs">Buy 10, Get 1 Free</p>
+                        </div>
+                        
+
                     </div>
-                    <div class="reqs">
-                        <img src="images/check-circle.png" width="16" height="16">
-                        <p class="reqs">Buy 10, Get 1 Free</p>
+
+                    <div class="buttons">
+                        <button class="btn">Sign Up Now</button>
                     </div>
-                    
 
                 </div>
 
-                <div class="buttons">
-                    <button class="btn">Sign Up Now</button>
+                <!--punch card-->
+                <div class="card-container">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="card-heading">
+                                <h3 class="card-title">My Punch Card</h3>
+                                <p class="side-text">8 / 10 Scoops</p>
+                            </div>
+                            <div class="card-row">
+                                <img src="images/icecream-punch.png" width="50" height="50">
+                                <img src="images/icecream-punch.png" width="50" height="50">
+                                <img src="images/icecream-punch.png" width="50" height="50">
+                                <img src="images/icecream-punch.png" width="50" height="50">
+                            </div>
+                            <div class="card-row">
+                                <img src="images/icecream-punch.png" width="50" height="50">
+                                <img src="images/icecream-punch.png" width="50" height="50">
+                                <img src="images/icecream-punch.png" width="50" height="50">
+                                <img src="images/icecream-punch.png" width="50" height="50">
+                            </div>
+                            <div class="card-row">
+                                <img src="images/icrecream-punch-blank.png" width="50" height="50">
+                                <img src="images/icrecream-punch-blank.png" width="50" height="50">
+                            </div>
+                            <div class="card-heading">
+                                <p class="subtext">Almost there! 2 more scoops until your free waffle cone.</p>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+
             </div>
 
 
@@ -240,6 +277,30 @@
                     <h1 class="main headers">Stop by for a Smile</h1>
                 </div>
 
+                <div class="locations">
+                    <h3 class="location">West End Shop</h3>
+                    <div class="address">
+                        <img src="images/map-pin.png" width="15" height="15">
+                        <p class="addr"><u>123 Sprinkle Lane, Portland OR</u></p>
+                    </div>
+                    <div class="address">
+                        <img src="images/clock.png" width="15" height="15">
+                        <p class="addr"><u>Mon-Sun: 12pm - 10pm</u></p>
+                    </div>
+                    <div class="directions"><u><b>Get Directions</b></u></div>
+                    
+                    <h3 class="location">The Waterfront</h3>
+                    <div class="address">
+                        <img src="images/map-pin.png" width="15">
+                        <p class="addr"><u>456 Ripple Blvd, Portland OR</u></p>
+                    </div>
+                    <div class="address">
+                        <img src="images/clock.png" width="15">
+                        <p class="addr"><u>Wed-Sun: 1pm - 9pm</u></p>
+                    </div>
+                    <div class="directions"><u><b>Get Directions</b></u></div>
+                </div>
+
                 <div class="image">
                     <img src="images/map.png" alt="woman making ice cream" width="450" height="300">
                 </div>
@@ -249,8 +310,41 @@
 
 <!--------------------- FOOTER --------------------------->
             <div class="footer">
-                <div class="text">
+            <!-- siblings so that they sit horizontally in a flexbox-->
+                <div class="left-section">
+                    <div class="heading">
+                        <img src="images/icecream-punch.png" width="30" height="30">
+                        <h2 class="title">Scoops & Smiles</h2>
+                    </div>
+                    <p class="description">Spreading joy one scoop at a time since 2018.<br>
+                    Hand-crafted in Portland, OR.</p>
+                    <div class="socials">
+                        <img src="images/instagram.png" width="15" height="15">
+                        <img src="images/facebook.png" width="15" height="15">
+                        <img src="images/twitter.png" width="15" height="15">
+                    </div>
+                </div>
 
+                <div class="right-section">
+                    <div class="one-third">
+                        <h3 class="heading"><b>Explore</b></h3>
+                        <p class="subtext">Flavors</p>
+                        <p class="subtext">Our Story</p>
+                        <p class="subtext">Events</p>
+                        <p class="subtext">Careers</p>
+                    </div>
+                    <div class="one-third">
+                        <h3 class="heading"><b>Shop</b></h3>
+                        <p class="subtext">Order Online</p>
+                        <p class="subtext">Gift Cards</p>
+                        <p class="subtext">Merchandise</p>
+                    </div>
+                    <div class="one-third">
+                        <h3 class="heading"><b>Support</b></h3>
+                        <p class="subtext">FAQ</p>
+                        <p class="subtext">Contact Us</p>
+                        <p class="subtext">Privacy Policy</p>
+                    </div>
                 </div>
 
             </div>
