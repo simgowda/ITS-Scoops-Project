@@ -5,7 +5,7 @@ body {
     margin: 0;
     /* font-family: 'Inter', sans-serif; */
     color: #4A2C2A;
-    max-width:fit-content;
+    max-width: fit-content;
 }
 
 /* last minute fix for improper website scaling */
@@ -286,16 +286,173 @@ body {
 
 /*----------------- elevate specific overrides ------------------*/
 .img-container{
-    display: block;
+    display: flex;
+    flex-direction: column;
+    
 }
 .elevate{
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 200px;
     background-color: #BDE9D1;
+    gap: 50px;
+    margin-top: -20px;
+    padding-bottom: 20px;
+
+    font-family: "Lexend Deca", sans-serif;
+    font-style: normal;
+}
+
+.elevate .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* makes the children of .elevate .left have a margin of 0 */
+.elevate .left > *{
+    margin: 0;
+    
+}
+
+.elevate .left .subtext {
+    font-size: 10px;
+    font-weight: 700;
 }
 
 .elevate .right {
     display:flex;
+    gap: 20px;
+}
+
+.elevate .right .image-pair {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 700;
 }
 
 
+/*----------------- explore specific overrides ------------------*/
+
+.explore{
+    height: 550px;
+    background-color: #F2E9FB;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+
+    font-family: "Lexend Deca", sans-serif;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore .subheading{
+    margin-bottom: -30px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.explore .heading{
+    margin: 0;
+}
+
+.explore .card-container {
+    display: flex;
+    gap: 40px;
+    
+}
+
+.explore .card-container .card{
+    background-color:white;
+    justify-content: center;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 20px;
+    width: 220px;
+}
+
+.explore .card-container .card .card-labels{
+    text-align: left;
+    margin-left: 15px;
+    margin-top: 5px;
+    font-size: 15px;
+}
+
+.explore .card-container .card .card-descriptions{
+    text-align: left;
+    margin-left: 15px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 9px;
+    line-height: 14px;
+}
+
+/*----------------- footer specific overrides ------------*/
+
+.footer-section{
+    background-color: #4A2C2A;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+
+}
+.footer {
+    display: flex;
+    gap: 350px;
+    padding-left: 50px;
+    padding-top: 30px;
+    height: 150px;
+}
+
+.footer .left-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .left-section .heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.footer .left-section .description{
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.footer .left-section .socials{
+    display: flex;
+    gap: 18px;
+    margin-top: 9px;
+}
+
+.footer .right-section{
+    display: flex;
+    gap: 50px;
+    font-size: 9px;
+}
+
+.footer .right-section .heading{
+    color: #FEE440;
+    font-size: 11px;
+}
+
+.footer-section .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* subtle line, matches dark bg */
+    padding-top: 15px;
+    margin-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 500px;
+    align-items: center;
+
+    font-size: 8px;
+}
