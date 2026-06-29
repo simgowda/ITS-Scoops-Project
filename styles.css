@@ -53,6 +53,56 @@ body {
     font-style: normal;
 }
 
+/* Hover effect for all cards on the page*/
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/*----------------- navigation specific overrides ------------*/
+
+.navigation {
+    display: flex;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    gap: 250px;
+    padding-left: 30px;
+    align-items: center;
+    background-color:#FFCAD4;
+}
+
+.navigation .heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.navigation .navbar{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.navigation .navbar a {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Keep text color */
+}
+
+.navigation .navbar .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+    background-color: #4A2C2A;
+}
+
 
 /*----------------- serving sunshine specific overrides ------------*/
 
@@ -143,7 +193,6 @@ body {
     margin-left: 100px;
     margin-top: 25px;
     margin-bottom: 20px;
-    
 }
 
 .flavors .card-container .card {
@@ -152,6 +201,10 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     width: 170px;
     height: 270px;
+
+    /* for link to flavor page*/
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Keep text color */
 }
 
 .flavors .card-container .card .card-content{

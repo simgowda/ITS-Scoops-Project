@@ -10,6 +10,21 @@
 
     <body>
         <div class="page-wrapper">
+<!--------------------- NAV BAR --------------------------->
+            <div class="navigation">
+                <div class="heading">
+                    <img src="images/icecream-punch.png" width="30" height="30">
+                    <h2 class="title">Scoops & Smiles</h2>
+                </div>
+
+                <nav class="navbar">
+                    <p><a href=#flavors>Flavors</a></p>
+                    <p>Our Story</p>
+                    <p><a href=#rewards>Rewards</a></p>
+                    <p><a href=#smile>Locations</a></p>
+                    <p class="button">Order Online</p>
+                </nav>
+            </div>
 <!--------------------- SERVING SUNSHINE --------------------------->
             <div class="serving-sunshine">
                 <div class="text">
@@ -30,7 +45,8 @@
 
 
 <!--------------------- FEAATURED FLAVORS --------------------------->
-            <div class="flavors">
+            <!--id gives unique identifier to be used to link to section in navbar-->
+            <div id="flavors" class="flavors">
                 <div class="text">
                     <div class="image">
                         <img src="images/pin-waves.png" alt="pin waves decal" width="950">
@@ -69,14 +85,14 @@
                         </div>
                     </div>
 
-                    <div class="card">
+                    <a href="lavender.html" class="card">
                         <img src="images/lavender-cloud-thumbnail.png" alt="Lavender Cloud Ice Cream" width="150">
                         <div class="card-content">
                             <h3 class="card-labels">Lavender Cloud</h3>
                             <p class="card-descriptions">Infused with organic<br>lavender and bits of raw<br>
                             wildflower honeycomb.</p>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
 
@@ -207,7 +223,7 @@
 
 
 <!--------------------- SCOOP REWARDS --------------------------->
-            <div class="scoop-rewards">
+            <div id="rewards" class="scoop-rewards">
 <!--made rewards-content and punch-card siblings so that they can sit horizontally in a flex box-->
                 <div class="rewards">
                     <div class="text">
@@ -273,7 +289,7 @@
 
 
 <!--------------------- STOP BY FOR A SMILE --------------------------->
-            <div class="smile">
+            <div id="smile" class="smile">
                 <div class="text">
                     <p class="pretext">FIND US</p>
                     <h1 class="main headers">Stop by for a Smile</h1>

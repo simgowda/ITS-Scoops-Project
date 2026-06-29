@@ -1,0 +1,301 @@
+/*----------------- overall structure --------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap'); /* main header and pretext font */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend+Deca:wght@100..900&display=swap'); /*descriptions font*/
+body {
+    margin: 0;
+    /* font-family: 'Inter', sans-serif; */
+    color: #4A2C2A;
+    max-width:fit-content;
+}
+
+/* last minute fix for improper website scaling */
+.page-wrapper{
+    width: 950px;
+    transform-origin: top left;
+    transform: scale(calc(100vw / 950px));
+}
+
+.pretext {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    margin-bottom: 3px;
+}
+
+.main.headers { /* class selector for all main headers */
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.description {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    margin-top: 3px;
+    line-height: 15px;
+}
+
+/* might be useless */
+.buttons {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Hover effect for all cards on the page*/
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/*----------------- navigation specific overrides ------------*/
+
+.navigation {
+    display: flex;
+    font-family: "Lexend Deca", sans-serif;
+    font-style: normal;
+    gap: 250px;
+    padding-left: 30px;
+    align-items: center;
+    background-color:#FFf;
+}
+
+.navigation .heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.navigation .navbar{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.navigation .navbar a {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Keep text color */
+}
+
+.navigation .navbar .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+    background-color: #4A2C2A;
+}
+
+
+/*----------------- lavender cloud specific overrides ------------*/
+
+.lavender .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 120px;
+    height: 500px;
+    background-color:#FFF;
+}
+
+.lavender .top .text{
+    display: flex;
+    flex-direction: column;
+    font-family: "Lexend Deca", sans-serif;
+    font-style: normal;
+    gap: 14px;
+    
+}
+
+.lavender .top .text p {
+    margin: 0; /* removes default browser margins from headings/paragraphs */
+}
+
+.lavender .top .text .highlighted{
+    font-size: 10px;
+    font-weight: 600;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    height: 20px;
+    width: 200px;
+    background-color: #FEE440;
+}
+
+.lavender .top .text .main-header{
+    font-size: 60px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    line-height: 60px;
+    
+}
+
+.lavender .top .text .subtext{
+    font-weight: 700;
+    color:#4a2c2a9a;
+}
+
+.lavender .top .text .description{
+    
+}
+
+.lavender .top .text .buttons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 800;
+    
+}
+
+.lavender .top .text .buttons .button{
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+    height: 40px;
+    width: 120px;
+    background-color: #4A2C2A;
+}
+
+.lavender .image{
+    
+}
+
+.lavender .bottom{
+    height: 210px;
+    background-color: #fff;
+    justify-content: center;
+    display: flex;
+    gap: 50px;
+    font-family: "Lexend Deca", sans-serif;
+    font-style: normal;
+}
+
+.lavender .bottom .one-third p{
+    margin: 3px;
+}
+
+.lavender .bottom .one-third {
+    gap: 122px;
+}
+
+.lavender .bottom .one-third .title{
+    font-size: 13px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.lavender .bottom .one-third .check{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 10px;
+}
+
+.lavender .bottom .one-third .tags{
+    font-size: 8px;
+    font-weight: 700;
+    display: flex;
+}
+
+.lavender .bottom .one-third .tags .dairy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #F2E9FB;
+    height: 20px;
+    width: 50px;
+}
+.lavender .bottom .one-third .tags .treenuts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background-color: #F2E9FB;
+    height: 20px;
+    width: 230px;
+}
+
+.lavender .bottom .one-third .attribute{
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    margin-bottom: 9px;
+}
+
+.lavender .bottom .one-third .attribute .label{
+    display: flex;
+    justify-content: space-between;
+    gap: 170px;
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.lavender .bottom .one-third .attribute .progbar{
+    width: 250px;           /* Fixed width */
+    height: 5px;           /* Height of the bar */
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: 12px;    /* Rounded corners */
+    overflow: hidden;       /* Hide overflow */
+}
+
+.lavender .bottom .one-third .attribute .progbar-inner1{
+    height: 100%;
+    width: 70%;             /* Fixed percentage */
+    background-color: #FEE440; /* yellow fill */
+}
+
+.lavender .bottom .one-third .attribute .progbar-inner2{
+    height: 100%;
+    width: 90%;             /* Fixed percentage */
+    background-color: #FEE440; /* yellow fill */
+}
+
+.lavender .bottom .one-third .attribute .progbar-inner3{
+    height: 100%;
+    width: 85%;             /* Fixed percentage */
+    background-color: #FEE440; /* yellow fill */
+}
+
+.lavender .bottom .one-third .attribute .progbar-inner4{
+    height: 100%;
+    width: 55%;             /* Fixed percentage */
+    background-color: #FEE440; /* yellow fill */
+}
+
+/*----------------- elevate specific overrides ------------------*/
+.img-container{
+    display: block;
+}
+.elevate{
+    display: flex;
+    height: 200px;
+    background-color: #BDE9D1;
+}
+
+.elevate .right {
+    display:flex;
+}
+
+
