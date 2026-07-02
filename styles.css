@@ -17,7 +17,13 @@ body {
 .page-wrapper{
     width: 950px;
     transform-origin: top left;
-    transform: scale(calc(100vw / 950px));
+    zoom: calc(100vw / 950px);
+}
+
+@supports not (zoom: 1) {
+    .page-wrapper {
+        transform: scale(calc(100vw / 950px));
+    }
 }
 
 
@@ -606,4 +612,5 @@ body {
 
     font-size: 8px;
 }
+
 
