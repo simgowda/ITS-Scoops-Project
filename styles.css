@@ -13,7 +13,9 @@ body {
     overflow-x: hidden;
 }
 
-/* last minute fix for improper website scaling */
+
+
+/* last minute fix for improper website scaling ON DESKTOP*/
 .page-wrapper{
     width: 950px;
     transform-origin: top left;
