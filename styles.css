@@ -17,13 +17,7 @@ body {
 .page-wrapper{
     width: 950px;
     transform-origin: top left;
-    zoom: calc(100vw / 950px);
-}
-
-@supports not (zoom: 1) {
-    .page-wrapper {
-        transform: scale(calc(100vw / 950px));
-    }
+    transform: scale(calc(100vw / 950px));
 }
 
 
