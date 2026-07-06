@@ -483,7 +483,7 @@ body {
     flex-wrap: wrap;
     background-color: #F2E9FB;
     padding: clamp(42px, 6.75vw, 98px) clamp(28px, 6.75vw, 84px);
-    gap: 42px;
+    gap: clamp(20px, 3vw, 50px);
     justify-content: center;
 }
  
@@ -494,18 +494,20 @@ body {
     justify-content: center;
     text-align: left;
     flex: 1 1 420px;
-    max-width: 620px;
+    max-width: 1600px;
 }
+
+
  
 .rewards .reqs {
     display: flex;
     align-items: center;
-    gap: 7px;
+    gap: 10px;
     font-family: "Lexend Deca", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
     font-weight: 600;
-    font-size: clamp(15px, 1.35vw, 20px);
+    font-size: clamp(13px, 1.15vw, 17px);
     line-height: 1.4;
 }
  
@@ -513,7 +515,7 @@ body {
     font-family: "Lexend Deca", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: clamp(15px, 1.35vw, 20px);
+    font-size: clamp(13px, 1.15vw, 17px);
     font-weight: 600;
     color: white;
     border: none;
@@ -525,9 +527,11 @@ body {
     cursor: pointer;
 }
  
-.rewards .card-container {
+.scoop-rewards .card-container {
     display: flex;
     text-align: left;
+    flex: 0 1 650px;
+    width: 100%;
 }
  
 .scoop-rewards .card-container .card {
@@ -536,8 +540,8 @@ body {
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     overflow: hidden;
     width: 100%;
-    max-width: 820px;
-    flex: 1 1 740px;
+    max-width: 650px;
+    flex: 1 1 650px;
 }
  
 .scoop-rewards .card-container .card .card-content {
@@ -551,20 +555,21 @@ body {
     font-family: "Lexend Deca", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-    font-size: clamp(20px, 1.8vw, 28px);
+    font-size: clamp(17px, 1.5vw, 23px);
     font-weight: 600;
     color: #4A2C2A;
     margin-bottom: 5px;
 }
  
 .scoop-rewards .card-container .card .card-content .card-heading .side-text {
-    font-size: clamp(16px, 1.4vw, 21px);
+    font-size: clamp(14px, 1.2vw, 18px);
 }
  
 .scoop-rewards .card-container .card .card-content .card-heading .subtext {
-    font-size: clamp(15px, 1.3vw, 20px);
-    margin-left: 0;
-    margin-top: 16px;
+    font-size: clamp(13px, 1.1vw, 17px);
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
 }
  
 .scoop-rewards .card-container .card .card-row {
@@ -602,7 +607,8 @@ body {
     flex-direction: column;
     text-align: left;
     justify-content: flex-start;
-    margin: 0;
+
+    margin-left: 80px;
     flex: 1 1 380px;
     max-width: 480px;
  
@@ -613,7 +619,7 @@ body {
 }
  
 .smile .locations .location {
-    margin-bottom: 5px;
+    margin-bottom: 2px;
     font-size: clamp(22px, 2.03vw, 28px);
     font-weight: 800;
 }
@@ -621,20 +627,22 @@ body {
 .smile .locations .address {
     display: flex;
     align-items: center;
-    margin-bottom: 6px;
-    gap: 5px;
+    margin-bottom: -4px;
+    gap: 4px;
     font-size: clamp(14px, 1.28vw, 18px);
     font-weight: 400;
+    line-height: 1;
 }
  
 .smile .locations .directions {
     font-size: clamp(13px, 1.22vw, 17px);
-    margin-top: 10px;
-    margin-bottom: 20px;
+    margin-top: 0;
+    margin-bottom: 4px;
+    line-height: 1;
 }
  
 .smile .image {
-    flex: 1 1 380px;
+    flex: 1 1 660px;
     display: flex;
     justify-content: center;
     margin-top: 0;
@@ -642,7 +650,7 @@ body {
  
 .smile .image img {
     width: 100%;
-    max-width: 560px;
+    max-width: 900px;
     height: auto;
 }
  
