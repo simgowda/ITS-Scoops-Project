@@ -134,7 +134,7 @@ img {
     display: flex;
     flex-direction: column; /* text blocks and buttons on top of e/o */
     margin-top: 0;
-    flex: 0 1 clamp(360px, 37.895vw, 720px);
+    flex: 0 1 clamp(800px, 39vw, 1000px); /* won't grow, will shrink, responsive width*/
 }
 
 .serving-sunshine .buttons{
@@ -175,7 +175,8 @@ img {
 
 .serving-sunshine .image{
     padding-left: 0;
-    padding-top: 0;
+    padding-top: 100px;
+    margin: 0;
     flex: 0 1 clamp(350px, 36.842vw, 700px);
 }
 
@@ -189,7 +190,7 @@ img {
     align-items: center; /* controls vertical position */
     justify-content: center;    /* controls horizontal position position (defaults to flex-direction:row) */
     gap: clamp(70px, 7.368vw, 140px);
-    min-height: clamp(440px, 46.316vw, 880px);
+    min-height: clamp(440px, 46.3vw, 780px);
     padding: 0 clamp(40px, 4.211vw, 80px);
 }
 
@@ -239,6 +240,10 @@ img {
     box-shadow: 0 clamp(4px, 0.421vw, 8px) clamp(8px, 0.842vw, 16px) rgba(0,0,0,0.1);
     width: clamp(170px, 17.895vw, 340px);
     min-height: clamp(270px, 28.421vw, 540px);
+    text-align: center;
+    justify-content: center;
+    padding-top: 15px;
+
 
     /* for link to flavor page*/
     text-decoration: none; /* Remove underline from link */
@@ -247,6 +252,7 @@ img {
 
 .flavors .card-container .card img {
     width: clamp(150px, 15.789vw, 300px);
+    justify-content: center;
 }
 
 .flavors .card-container .card .card-content{
@@ -332,7 +338,7 @@ img {
     align-items: center;
     padding-top: clamp(5px, 0.526vw, 10px);
     justify-content: center;
-    gap: clamp(45px, 4.737vw, 90px);
+    gap: clamp(70px, 5vw, 150px);
     padding-left: clamp(60px, 6.316vw, 120px);
     padding-right: clamp(60px, 6.316vw, 120px);
     min-height: clamp(440px, 46.316vw, 880px);
@@ -490,19 +496,22 @@ img {
 
 .scoop-rewards .card-container {
     display: flex;
-    flex: 0 1 clamp(350px, 36.842vw, 700px);
+    flex: 0 0 clamp(450px, 35vw, 650px);
 }
 
 .scoop-rewards .card-container .card{
     background-color: #fff;
-    border-radius: clamp(15px, 1.579vw, 30px);
+    border-radius: 30px;
     box-shadow: 0 clamp(4px, 0.421vw, 8px) clamp(8px, 0.842vw, 16px) rgba(0,0,0,0.1);
     overflow: hidden;
-    width: clamp(350px, 36.842vw, 700px);
-    min-height: clamp(270px, 28.421vw, 540px);
+    width: clamp(450px, 35vw, 650px);
+    min-height: clamp(270px, 28.421vw, 300px);
+    margin-right: 20px;
     
     margin-top: clamp(70px, 7.368vw, 140px);
-    margin-left: clamp(20px, 5.263vw, 100px);
+    margin-left: 30px;
+    margin-right: clamp(70px, 7.368vw, 100px);
+    margin-bottom: clamp(70px, 7.368vw, 140px);
 }
 
 .scoop-rewards .card-container .card .card-content{
@@ -514,7 +523,8 @@ img {
     display:flex;
     align-items: center;
     justify-content: space-between;
-    gap: clamp(40px, 14.737vw, 280px);
+
+    margin-right: 40px;
 /* font used for card*/
     font-family: "Lexend Deca", sans-serif;
     font-optical-sizing: auto;
@@ -557,6 +567,7 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     background-color: #F2E9FB;
+    min-height: clamp(500px, 46.316vw, 800px);
 }
 
 /*----------------- smile specific overrides ------------*/
@@ -604,6 +615,7 @@ img {
 .smile .image{
     margin-top: clamp(-320px, -16.842vw, -160px); /*negative because of default positive padding*/
     padding-left: clamp(120px, 12.632vw, 240px);
+    margin-bottom: clamp(50px, 10vw, 100px);
 }
 
 .smile .image img {
