@@ -1,0 +1,745 @@
+/* styles.css INDEX fixed with codex for responsive web design*/
+
+/*prompt: using styles.css, create styles5.css so that the webpage is no longer scaled at 950px but 
+fluidly takes up the entire width of the page. resize design elements to accomodate this change so that 
+the webpage does not look different from before*/
+
+/*----------------- overall structure --------------------*/
+/* Fluid standalone conversion of styles.css. The old 950px canvas now fills the viewport. */
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500,600,800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap'); /* main header and pretext font */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend+Deca:wght@100..900&display=swap'); /*descriptions font*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #4A2C2A;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pretext {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(8px, 0.842vw, 16px);
+    margin-bottom: clamp(3px, 0.316vw, 6px);
+}
+
+.main.headers { /* class selector for all main headers */
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 800;
+    font-size: clamp(30px, 3.158vw, 60px);
+    margin-top: clamp(2px, 0.211vw, 4px);
+    margin-bottom: clamp(2px, 0.211vw, 4px);
+    line-height: 1.15;
+}
+
+.description {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(11px, 1.158vw, 22px);
+    margin-top: clamp(3px, 0.316vw, 6px);
+    line-height: clamp(15px, 1.579vw, 30px);
+}
+
+/* might be useless */
+.buttons {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Hover effect for all cards on the page*/
+.card:hover {
+    transform: translateY(clamp(-10px, -0.526vw, -5px));
+    box-shadow: 0 clamp(8px, 0.842vw, 16px) clamp(16px, 1.684vw, 32px) rgba(0,0,0,0.2);
+}
+
+/*----------------- navigation specific overrides ------------*/
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    gap: clamp(24px, 26.316vw, 500px);
+    padding: clamp(10px, 1.579vw, 30px) clamp(30px, 3.158vw, 60px);
+    align-items: center;
+    justify-content: space-between;
+    background-color:#FFCAD4;
+}
+
+.navigation .heading{
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 1.053vw, 20px);
+    font-size: clamp(13px, 1.368vw, 26px);
+}
+
+.navigation .heading img {
+    width: clamp(30px, 3.158vw, 60px);
+}
+
+.navigation .navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: clamp(30px, 3.158vw, 60px);
+    font-size: clamp(11px, 1.158vw, 22px);
+    font-weight: 700;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation .navbar a {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Keep text color */
+}
+
+.navigation .navbar .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: clamp(20px, 2.105vw, 40px);
+    height: clamp(30px, 3.158vw, 60px);
+    width: clamp(100px, 10.526vw, 200px);
+    background-color: #4A2C2A;
+}
+
+/*----------------- serving sunshine specific overrides ------------*/
+
+.serving-sunshine .text{
+    display: flex;
+    flex-direction: column; /* text blocks and buttons on top of e/o */
+    margin-top: 0;
+    flex: 0 1 clamp(360px, 37.895vw, 720px);
+}
+
+.serving-sunshine .buttons{
+    display: flex;
+    gap: clamp(12px, 1.263vw, 24px);
+    margin-top: clamp(10px, 1.053vw, 20px);
+}
+
+.serving-sunshine .buttons .btn{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: clamp(11px, 1.158vw, 22px);
+    font-weight: 600;
+    color: white;
+    border: 0;
+    border-radius: clamp(20px, 2.105vw, 40px);
+    height: clamp(35px, 3.684vw, 70px);
+    width: clamp(125px, 13.158vw, 250px);
+    background-color: #4A2C2A;
+}
+
+.serving-sunshine .buttons .btn2{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: clamp(11px, 1.158vw, 22px);
+    font-weight: 600;
+    color: #4A2C2A;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #4A2C2A;
+    border-radius: clamp(20px, 2.105vw, 40px);
+    height: clamp(35px, 3.684vw, 70px);
+    width: clamp(100px, 10.526vw, 200px);
+    background-color: #FFCAD4 ;
+}
+
+.serving-sunshine .image{
+    padding-left: 0;
+    padding-top: 0;
+    flex: 0 1 clamp(350px, 36.842vw, 700px);
+}
+
+.serving-sunshine .image img {
+    width: clamp(350px, 36.842vw, 700px);
+}
+
+.serving-sunshine {
+    background-color: #FFCAD4;
+    display: flex; /* horiztonal layout by default*/
+    align-items: center; /* controls vertical position */
+    justify-content: center;    /* controls horizontal position position (defaults to flex-direction:row) */
+    gap: clamp(70px, 7.368vw, 140px);
+    min-height: clamp(440px, 46.316vw, 880px);
+    padding: 0 clamp(40px, 4.211vw, 80px);
+}
+
+/*----------------- flavors specific overrides ------------*/
+
+.flavors .text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.flavors .pretext{
+    margin-bottom: clamp(2px, 0.211vw, 4px);
+}
+
+.flavors .main.headers{
+    margin-top: clamp(2px, 0.211vw, 4px);
+}
+
+.flavors .image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding-bottom: clamp(30px, 3.158vw, 60px);
+}
+
+.flavors .image img {
+    width: 100%;
+}
+
+.flavors .card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(15px, 1.579vw, 30px);
+    justify-content: center;
+    align-items: flex-end;
+    margin-left: 0;
+    margin-top: clamp(25px, 2.632vw, 50px);
+    margin-bottom: clamp(20px, 2.105vw, 40px);
+    width: 100%;
+}
+
+.flavors .card-container .card {
+    background-color: #fff;
+    border-radius: clamp(10px, 1.053vw, 20px);
+    box-shadow: 0 clamp(4px, 0.421vw, 8px) clamp(8px, 0.842vw, 16px) rgba(0,0,0,0.1);
+    width: clamp(170px, 17.895vw, 340px);
+    min-height: clamp(270px, 28.421vw, 540px);
+
+    /* for link to flavor page*/
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Keep text color */
+}
+
+.flavors .card-container .card img {
+    width: clamp(150px, 15.789vw, 300px);
+}
+
+.flavors .card-container .card .card-content{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: left;
+    font-size: clamp(11px, 1.158vw, 22px);
+    margin-left: clamp(15px, 1.579vw, 30px);
+}
+
+.flavors .card-container .card .card-content .card-labels{
+    font-size: clamp(15px, 1.579vw, 30px);
+    margin-bottom: 0px;
+}
+
+.flavors .card-container .card .card-content .card-descriptions{
+    font-size: clamp(9px, 0.947vw, 18px);
+    margin-bottom: 0px;
+    line-height: clamp(14px, 1.474vw, 28px);
+}
+
+.flavors {
+    background-color: #FFFDF9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: clamp(570px, 60vw, 1140px);
+    padding: clamp(0px, 2vw, 38px) clamp(30px, 3.158vw, 60px);
+}
+
+/*----------------- churned specific overrides ------------*/
+.churned .text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    flex: 0 1 clamp(380px, 40vw, 760px);
+}
+
+.churned .image{
+    padding-right: 0; /*space between image and text */
+    flex: 0 1 clamp(350px, 36.842vw, 700px);
+}
+
+.churned .image img {
+    width: clamp(350px, 36.842vw, 700px);
+}
+
+.churned .tips{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: clamp(15px, 1.579vw, 30px);
+
+    /* tip labels or text */
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(11px, 1.158vw, 22px);
+    line-height: clamp(15px, 1.579vw, 30px);
+}
+
+.churned .tips .image-tips{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: clamp(20px, 2.105vw, 40px);
+    width: clamp(30px, 3.158vw, 60px);
+    height: clamp(30px, 3.158vw, 60px);
+}
+
+.churned .tips .image-tips img {
+    width: clamp(15px, 1.579vw, 30px);
+}
+
+.churned {
+    background-color: #BDE9D1;
+    display: flex;
+    align-items: center;
+    padding-top: clamp(5px, 0.526vw, 10px);
+    justify-content: center;
+    gap: clamp(45px, 4.737vw, 90px);
+    padding-left: clamp(60px, 6.316vw, 120px);
+    padding-right: clamp(60px, 6.316vw, 120px);
+    min-height: clamp(440px, 46.316vw, 880px);
+}
+
+.image-churned{
+    display: flex;
+    flex-direction: column;
+}
+
+.image-churned img {
+    width: 100%;
+}
+
+/*----------------- peach specific overrides ------------*/
+
+.peach .text .pretext {
+    font-size: clamp(12px, 1.263vw, 24px);
+    font-weight: 700;
+}
+.peach .main.headers{
+    font-size: clamp(40px, 4.211vw, 80px);
+}
+
+.peach .buttons {
+    margin-top: clamp(10px, 1.053vw, 20px);
+}
+
+.peach .buttons .btn{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: clamp(11px, 1.158vw, 22px);
+    font-weight: 600;
+    color: white;
+    border: 0;
+    border-radius: clamp(20px, 2.105vw, 40px);
+    height: clamp(40px, 4.211vw, 80px);
+    width: clamp(150px, 15.789vw, 300px);
+    background-color: #4A2C2A;
+}
+
+.peach {
+    background-color: #FEE440;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: clamp(300px, 31.579vw, 600px);
+    padding: clamp(35px, 3.684vw, 70px) clamp(24px, 2.526vw, 48px);
+}
+
+/*----------------- fanfaves specific overrides ------------*/
+
+.fanfaves .card-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(20px, 2.105vw, 40px);
+    text-align: left;
+    margin-top: clamp(30px, 3.158vw, 60px);
+    align-items: stretch;
+    justify-content: center;
+    width: 100%;
+}
+
+.fanfaves .card-container .card{
+    background-color: #fff;
+    border-radius: clamp(10px, 1.053vw, 20px);
+    box-shadow: 0 clamp(4px, 0.421vw, 8px) clamp(8px, 0.842vw, 16px) rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: clamp(250px, 26.316vw, 500px);
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 clamp(250px, 26.316vw, 500px);
+}
+
+.fanfaves .card-container .card .image-star{
+    margin-left: clamp(10px, 1.053vw, 20px);
+    margin-top: clamp(15px, 1.579vw, 30px);
+}
+
+.fanfaves .card-container .card .image-star img {
+    width: clamp(10px, 1.053vw, 20px);
+}
+
+.fanfaves .card-container .card .card-content{
+    display: flex;
+    flex-direction: column;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: left;
+    font-size: clamp(11px, 1.158vw, 22px);
+    margin-left: clamp(15px, 1.579vw, 30px);
+    margin-bottom: clamp(5px, 0.526vw, 10px);
+    flex-grow: 1;
+}
+
+.fanfaves .card-container .card .card-content .card-subtext{
+    margin-top: clamp(-20px, -1.053vw, -10px);
+    font-size: clamp(9px, 0.947vw, 18px);
+}
+
+.fanfaves {
+    background-color: #FFFDF9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: clamp(20px, 2.105vw, 40px) clamp(30px, 3.158vw, 60px);
+    justify-content: center;
+    text-align: center;
+    min-height: clamp(350px, 36.842vw, 700px);
+}
+
+/*----------------- rewards specific overrides ------------*/
+
+.rewards .reqs{
+    display: flex;
+    align-items: center;
+    gap: clamp(7px, 0.737vw, 14px);
+
+    /* tip labels or text */
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(11px, 1.158vw, 22px);
+    line-height: clamp(15px, 1.579vw, 30px);
+}
+
+.rewards .reqs img {
+    width: clamp(16px, 1.684vw, 32px);
+}
+
+.rewards .buttons .btn{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: clamp(11px, 1.158vw, 22px);
+    font-weight: 600;
+    color: white;
+    border: 0;
+    border-radius: clamp(20px, 2.105vw, 40px);
+    height: clamp(35px, 3.684vw, 70px);
+    width: clamp(125px, 13.158vw, 250px);
+    background-color: #4A2C2A;
+    margin-top: clamp(15px, 1.579vw, 30px);
+}
+
+.rewards .card-container{
+    display: flex;
+    text-align: left;
+}
+
+.scoop-rewards .card-container {
+    display: flex;
+    flex: 0 1 clamp(350px, 36.842vw, 700px);
+}
+
+.scoop-rewards .card-container .card{
+    background-color: #fff;
+    border-radius: clamp(15px, 1.579vw, 30px);
+    box-shadow: 0 clamp(4px, 0.421vw, 8px) clamp(8px, 0.842vw, 16px) rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: clamp(350px, 36.842vw, 700px);
+    min-height: clamp(270px, 28.421vw, 540px);
+    
+    margin-top: clamp(70px, 7.368vw, 140px);
+    margin-left: clamp(20px, 5.263vw, 100px);
+}
+
+.scoop-rewards .card-container .card .card-content{
+    margin-left: clamp(20px, 2.105vw, 40px);
+    margin-top: clamp(10px, 1.053vw, 20px);
+}
+
+.scoop-rewards .card-container .card .card-content .card-heading{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(40px, 14.737vw, 280px);
+/* font used for card*/
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: clamp(11px, 1.158vw, 22px);
+    font-weight: 600;
+    color: #4A2C2A;
+
+    margin-bottom: clamp(5px, 0.526vw, 10px);
+}
+
+.scoop-rewards .card-container .card .card-content .card-heading .side-text{
+    font-size: clamp(9px, 0.947vw, 18px);
+}
+
+.scoop-rewards .card-container .card .card-content .card-heading .subtext{
+    font-size: clamp(8px, 0.842vw, 16px);
+    margin-left: clamp(40px, 4.211vw, 80px);
+    margin-top: clamp(20px, 2.105vw, 40px);
+}
+
+.scoop-rewards .card-container .card .card-row img {
+    width: clamp(50px, 5.263vw, 100px);
+}
+
+.rewards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* vertical alignment */
+    padding-top: clamp(80px, 8.421vw, 160px);
+    justify-content: flex-start; /* horizontal alignment */
+    padding-left: clamp(60px, 6.316vw, 120px);
+    text-align: left;
+    min-height: clamp(320px, 33.684vw, 640px);
+    flex: 1 1 clamp(420px, 44.211vw, 840px);
+}
+
+.scoop-rewards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #F2E9FB;
+}
+
+/*----------------- smile specific overrides ------------*/
+
+.smile .main.headers{
+}
+
+.smile .locations {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    margin-left: clamp(-440px, -23.158vw, -220px);
+
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: clamp(10px, 1.053vw, 20px);
+}
+
+.smile .locations .location{
+    margin-bottom: clamp(5px, 0.526vw, 10px);
+    font-size: clamp(16px, 1.684vw, 32px);
+    font-weight: 800;
+}
+
+.smile .locations .address{
+    display: flex;
+    align-items: center;
+    margin-bottom: clamp(-20px, -1.053vw, -10px);
+    gap: clamp(5px, 0.526vw, 10px);
+    font-size: clamp(10px, 1.053vw, 20px);
+    font-weight: 400;
+}
+
+.smile .locations .address img {
+    width: clamp(15px, 1.579vw, 30px);
+}
+
+.smile .locations .directions{
+    font-size: clamp(9px, 0.947vw, 18px);
+    margin-top: clamp(10px, 1.053vw, 20px);
+}
+
+.smile .image{
+    margin-top: clamp(-320px, -16.842vw, -160px); /*negative because of default positive padding*/
+    padding-left: clamp(120px, 12.632vw, 240px);
+}
+
+.smile .image img {
+    width: clamp(450px, 47.368vw, 900px);
+}
+
+.smile {
+    background-color: #FFFDF9;
+    display: flex;
+    flex-direction: column; /* makes text and image stack on top of e/o, instead of side by side */
+    align-items: flex-start;
+    padding-top: clamp(60px, 6.316vw, 120px);
+    justify-content: flex-start;
+    padding-left: clamp(300px, 31.579vw, 600px);
+    text-align: center;
+    min-height: clamp(440px, 46.316vw, 880px);
+}
+
+/*----------------- footer specific overrides ------------*/
+
+.footer-section{
+    background-color: #4A2C2A;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(120px, 36.842vw, 700px);
+    padding-left: clamp(50px, 5.263vw, 100px);
+    padding-top: clamp(30px, 3.158vw, 60px);
+    min-height: clamp(150px, 15.789vw, 300px);
+}
+
+.footer .left-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .left-section .heading{
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 1.053vw, 20px);
+    font-size: clamp(13px, 1.368vw, 26px);
+}
+
+.footer .left-section .heading img {
+    width: clamp(30px, 3.158vw, 60px);
+}
+
+.footer .left-section .description{
+    font-size: clamp(10px, 1.053vw, 20px);
+    line-height: clamp(20px, 2.105vw, 40px);
+}
+
+.footer .left-section .socials{
+    display: flex;
+    gap: clamp(18px, 1.895vw, 36px);
+    margin-top: clamp(9px, 0.947vw, 18px);
+}
+
+.footer .left-section .socials img {
+    width: clamp(15px, 1.579vw, 30px);
+}
+
+.footer .right-section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(50px, 5.263vw, 100px);
+    font-size: clamp(9px, 0.947vw, 18px);
+}
+
+.footer .right-section .heading{
+    color: #FEE440;
+    font-size: clamp(11px, 1.158vw, 22px);
+}
+
+.footer-section .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* subtle line, matches dark bg */
+    padding-top: clamp(15px, 1.579vw, 30px);
+    margin-top: clamp(25px, 2.632vw, 50px);
+    padding-bottom: clamp(25px, 2.632vw, 50px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: clamp(32px, 52.632vw, 1000px);
+    align-items: center;
+
+    font-size: clamp(8px, 0.842vw, 16px);
+}
+
+@media (max-width: 900px) {
+    .navigation,
+    .serving-sunshine,
+    .churned,
+    .scoop-rewards,
+    .smile,
+    .footer,
+    .footer-section .footer-bottom {
+        justify-content: center;
+    }
+
+    .serving-sunshine,
+    .churned,
+    .smile {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .navigation {
+        gap: clamp(20px, 8vw, 60px);
+        padding: 15px 20px;
+    }
+
+    .serving-sunshine,
+    .churned,
+    .peach,
+    .fanfaves,
+    .scoop-rewards,
+    .smile {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .smile .locations,
+    .smile .image {
+        margin-left: 0;
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .footer {
+        gap: 40px;
+        padding-right: 24px;
+    }
+}

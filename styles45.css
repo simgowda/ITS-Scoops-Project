@@ -1,0 +1,612 @@
+
+/*----------------- overall structure --------------------*/
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500,600,800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap'); /* main header and pretext font */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend+Deca:wght@100..900&display=swap'); /*descriptions font*/
+body {
+    margin: 0;
+    /* font-family: 'Inter', sans-serif; */
+    color: #4A2C2A;
+    max-width:fit-content;
+
+    /* claude-given fix for scaling & viewport issues*/
+    overflow-x: hidden;
+}
+
+
+
+/* last minute fix for improper website scaling ON DESKTOP*/
+.page-wrapper{
+    width: 950px;
+    transform-origin: top left;
+    transform: scale(calc(100vw / 950px));
+}
+
+
+.pretext {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 8px;
+    margin-bottom: 3px;
+}
+
+.main.headers { /* class selector for all main headers */
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.description {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    margin-top: 3px;
+    line-height: 15px;
+}
+
+/* might be useless */
+.buttons {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Hover effect for all cards on the page*/
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/*----------------- navigation specific overrides ------------*/
+
+.navigation {
+    display: flex;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    gap: 250px;
+    padding-left: 30px;
+    align-items: center;
+    background-color:#FFCAD4;
+}
+
+.navigation .heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.navigation .navbar ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation .navbar a {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Keep text color */
+}
+
+.navigation .navbar .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 20px;
+    height: 30px;
+    width: 100px;
+    background-color: #4A2C2A;
+}
+
+
+/*----------------- serving sunshine specific overrides ------------*/
+
+.serving-sunshine .text{
+    display: flex;
+    flex-direction: column; /* text blocks and buttons on top of e/o */
+    margin-top: 180px;
+}
+
+.serving-sunshine .buttons{
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.serving-sunshine .buttons .btn{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    border: 6px;
+    border-radius: 20px;
+    height: 35px;
+    width: 125px;
+    background-color: #4A2C2A;
+}
+
+.serving-sunshine .buttons .btn2{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    color: #4A2C2A;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #4A2C2A;
+    border-radius: 20px;
+    height: 35px;
+    width: 100px;
+    background-color: #FFCAD4 ;
+}
+
+.serving-sunshine .image{
+    padding-left: 70px;
+    padding-top: 90px;
+}
+
+.serving-sunshine {
+    background-color: #FFCAD4;
+    display: flex; /* horiztonal layout by default*/
+    align-items: flex-start; /* controls vertical position */
+    justify-content: flex-start;    /* controls horizontal position position (defaults to flex-direction:row) */
+    height: 440px;
+    padding-left: 40px;
+    
+    
+}
+
+/*----------------- flavors specific overrides ------------*/
+
+.flavors .text{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.flavors .pretext{
+    margin-bottom: 2px;
+}
+
+.flavors .main.headers{
+    margin-top: 2px;
+}
+
+.flavors .image {
+    display: flex;
+    padding-bottom: 30px;
+}
+
+.flavors .card-container{
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: 100px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+
+.flavors .card-container .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 170px;
+    height: 270px;
+
+    /* for link to flavor page*/
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Keep text color */
+}
+
+.flavors .card-container .card .card-content{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: left;
+    font-size: 11px;
+    margin-left: 15px;
+}
+
+.flavors .card-container .card .card-content .card-labels{
+    font-size: 15px;
+    margin-bottom: 0px;
+}
+
+.flavors .card-container .card .card-content .card-descriptions{
+    font-size: 9px;
+    margin-bottom: 0px;
+    line-height: 14px;
+}
+
+
+.flavors {
+    background-color: #FFFDF9;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: center;
+    height: 570px;
+}
+
+/*----------------- churned specific overrides ------------*/
+.churned .text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.churned .image{
+    padding-right: 70px; /*space between image and text */
+}
+
+.churned .tips{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 15px;
+
+    /* tip labels or text */
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.churned .tips .image-tips{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+.churned {
+    background-color: #BDE9D1;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 5px;
+    justify-content: flex-start;
+    padding-left: 60px;
+    height: 440px;
+}
+
+.image-churned{
+    display: flex;
+    flex-direction: column;
+}
+
+/*----------------- peach specific overrides ------------*/
+
+.peach .text .pretext {
+    font-size: 12px;
+    font-weight: 700;
+}
+.peach .main.headers{
+    font-size: 40px;
+}
+
+.peach .buttons {
+    margin-top: 10px;
+}
+
+.peach .buttons .btn{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    border: 6px;
+    border-radius: 20px;
+    height: 40px;
+    width: 150px;
+    background-color: #4A2C2A;
+}
+
+.peach {
+    background-color: #FEE440;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 300px;
+}
+
+/*----------------- fanfaves specific overrides ------------*/
+
+.fanfaves .card-container{
+    display: flex;
+    gap: 20px;
+    text-align: left;
+    margin-top: 30px;
+    align-items: stretch;
+}
+
+.fanfaves .card-container .card{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 250px;
+    /*height: 150px;*/
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.fanfaves .card-container .card .image-star{
+    margin-left: 10px;
+    margin-top: 15px;
+}
+
+.fanfaves .card-container .card .card-content{
+    display: flex;
+    flex-direction: column;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    text-align: left;
+    font-size: 11px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    flex-grow: 1;
+}
+
+.fanfaves .card-container .card .card-content .card-subtext{
+    margin-top: -10px;
+    font-size: 9px;
+}
+
+.fanfaves {
+    background-color: #FFFDF9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    justify-content: center;
+    text-align: center;
+    height: 350px;
+}
+
+/*----------------- rewards specific overrides ------------*/
+
+.rewards .reqs{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    /* tip labels or text */
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    line-height: 15px;
+}
+
+.rewards .buttons .btn{
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    color: white;
+    border: 6px;
+    border-radius: 20px;
+    height: 35px;
+    width: 125px;
+    background-color: #4A2C2A;
+    margin-top: 15px;
+}
+
+.rewards .card-container{
+    display: flex;
+    text-align: left;
+}
+
+.scoop-rewards .card-container .card{
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    width: 350px;
+    height: 270px;
+    
+    margin-top: 70px;
+    margin-left: 50px;
+}
+
+.scoop-rewards .card-container .card .card-content{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.scoop-rewards .card-container .card .card-content .card-heading{
+    display:flex;
+    align-items: center;
+    gap: 140px;
+/* font used for card*/
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 11px;
+    font-weight: 600;
+    color: #4A2C2A;
+
+    margin-bottom: 5px;
+}
+
+.scoop-rewards .card-container .card .card-content .card-heading .side-text{
+    font-size: 9px;
+}
+
+.scoop-rewards .card-container .card .card-content .card-heading .subtext{
+    font-size: 8px;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+
+
+.rewards {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* vertical alignment */
+    padding-top: 80px;
+    justify-content: flex-start; /* horizontal alignment */
+    padding-left: 60px;
+    text-align: left;
+    height: 320px;
+}
+
+.scoop-rewards{
+    display: flex;
+    background-color: #F2E9FB;
+}
+
+/*----------------- smile specific overrides ------------*/
+
+.smile .main.headers{
+}
+
+.smile .locations {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: flex-start;
+    margin-left: -220px;
+
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 10px;
+    
+    
+}
+
+.smile .locations .location{
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.smile .locations .address{
+    display: flex;
+    align-items: center;
+    margin-bottom: -10px;
+    gap: 5px;
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.smile .locations .directions{
+    font-size: 9px;
+    margin-top: 10px;
+}
+
+.smile .image{
+    margin-top: -160px; /*negative because of default positive padding*/
+    padding-left: 120px;
+}
+.smile {
+    background-color: #FFFDF9;
+    display: flex;
+    flex-direction: column; /* makes text and image stack on top of e/o, instead of side by side */
+    align-items: flex-start;
+    padding-top: 60px;
+    justify-content: flex-start;
+    padding-left: 300px;
+    text-align: center;
+    height: 440px;
+}
+
+/*----------------- footer specific overrides ------------*/
+
+.footer-section{
+    background-color: #4A2C2A;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+
+}
+.footer {
+    display: flex;
+    gap: 350px;
+    padding-left: 50px;
+    padding-top: 30px;
+    height: 150px;
+}
+
+.footer .left-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .left-section .heading{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+}
+
+.footer .left-section .description{
+    font-size: 10px;
+    line-height: 20px;
+}
+
+.footer .left-section .socials{
+    display: flex;
+    gap: 18px;
+    margin-top: 9px;
+}
+
+.footer .right-section{
+    display: flex;
+    gap: 50px;
+    font-size: 9px;
+}
+
+.footer .right-section .heading{
+    color: #FEE440;
+    font-size: 11px;
+}
+
+.footer-section .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* subtle line, matches dark bg */
+    padding-top: 15px;
+    margin-top: 25px;
+    padding-bottom: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    gap: 500px;
+    align-items: center;
+
+    font-size: 8px;
+}
+
+

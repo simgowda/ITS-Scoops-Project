@@ -1,0 +1,553 @@
+/* styles2.css LAVENDER fixed with codex for responsive web design*/
+
+/*prompt: using styles2.css, create styles4.css so that the webpage is no longer scaled at 950px but 
+fluidly takes up the entire width of the page. resize design elements to accomodate this change so that 
+the webpage does not look different from before*/
+
+/*----------------- overall structure --------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap'); /* main header and pretext font */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lexend+Deca:wght@100..900&display=swap'); /*descriptions font*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #4A2C2A;
+    overflow-x: hidden;
+}
+
+/* Fluid replacement for the old 950px wrapper scale. */
+.page-wrapper {
+    width: 100%;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.pretext {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 600;
+    font-size: clamp(8px, 0.842vw, 16px);
+    margin-bottom: clamp(3px, 0.316vw, 6px);
+}
+
+.main.headers { /* class selector for all main headers */
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 800;
+    font-size: clamp(30px, 3.158vw, 60px);
+    margin-top: clamp(2px, 0.211vw, 4px);
+    margin-bottom: clamp(2px, 0.211vw, 4px);
+}
+
+.description {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(11px, 1.158vw, 22px);
+    margin-top: clamp(3px, 0.316vw, 6px);
+    line-height: clamp(15px, 1.579vw, 30px);
+}
+
+/* might be useless */
+.buttons {
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+/* Hover effect for all cards on the page*/
+.card:hover {
+    transform: translateY(clamp(-10px, -0.526vw, -5px));
+    box-shadow: 0 clamp(8px, 0.842vw, 16px) clamp(16px, 1.684vw, 32px) rgba(0,0,0,0.2);
+}
+
+/*----------------- navigation specific overrides ------------*/
+
+.navigation {
+    display: flex;
+    font-family: "Lexend Deca", sans-serif;
+    font-style: normal;
+    gap: clamp(250px, 26.316vw, 500px);
+    padding-left: clamp(30px, 3.158vw, 60px);
+    align-items: center;
+    background-color:#FFf;
+}
+
+.navigation .heading{
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 1.053vw, 20px);
+    font-size: clamp(13px, 1.368vw, 26px);
+}
+
+.navigation .heading img {
+    width: clamp(30px, 3.158vw, 60px);
+}
+
+.navigation .navbar ul {
+    display: flex;
+    align-items: center;
+    gap: clamp(30px, 3.158vw, 60px);
+    font-size: clamp(11px, 1.158vw, 22px);
+    font-weight: 700;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navigation .navbar a {
+    text-decoration: none; /* Remove underline from link */
+    color: inherit; /* Keep text color */
+}
+
+.navigation .navbar .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: clamp(20px, 2.105vw, 40px);
+    height: clamp(30px, 3.158vw, 60px);
+    width: clamp(100px, 10.526vw, 200px);
+    background-color: #4A2C2A;
+}
+
+/*----------------- lavender cloud specific overrides ------------*/
+
+.lavender .top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(120px, 12.632vw, 240px);
+    min-height: clamp(500px, 52.632vw, 1000px);
+    background-color:#FFF;
+}
+
+.lavender .top .text{
+    display: flex;
+    flex-direction: column;
+    font-family: "Lexend Deca", sans-serif;
+    font-style: normal;
+    gap: clamp(14px, 1.474vw, 28px);
+}
+
+.lavender .top .text p {
+    margin: 0; /* removes default browser margins from headings/paragraphs */
+}
+
+.lavender .top .text .highlighted{
+    font-size: clamp(10px, 1.053vw, 20px);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: clamp(20px, 2.105vw, 40px);
+    height: clamp(20px, 2.105vw, 40px);
+    width: clamp(200px, 21.053vw, 400px);
+    background-color: #FEE440;
+}
+
+.lavender .top .text .main-header{
+    font-size: clamp(60px, 6.316vw, 120px);
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: clamp(60px, 6.316vw, 120px);
+}
+
+.lavender .top .text .subtext{
+    font-size: clamp(16px, 1.684vw, 32px);
+    font-weight: 700;
+    color:#4a2c2a9a;
+}
+
+.lavender .top .text .buttons{
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 1.053vw, 20px);
+    font-weight: 800;
+}
+
+.lavender .top .text .buttons .button{
+    font-size: clamp(11px, 1.158vw, 22px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: clamp(20px, 2.105vw, 40px);
+    height: clamp(40px, 4.211vw, 80px);
+    width: clamp(120px, 12.632vw, 240px);
+    background-color: #4A2C2A;
+}
+
+.lavender .top .text .buttons .price {
+    font-size: clamp(16px, 1.684vw, 32px);
+}
+
+.lavender .image img {
+    width: clamp(350px, 36.842vw, 700px);
+}
+
+.lavender .bottom{
+    min-height: clamp(210px, 22.105vw, 420px);
+    background-color: #fff;
+    justify-content: center;
+    display: flex;
+    gap: clamp(50px, 5.263vw, 100px);
+    font-family: "Lexend Deca", sans-serif;
+    font-style: normal;
+}
+
+.lavender .bottom .one-third p{
+    margin: clamp(3px, 0.316vw, 6px);
+}
+
+.lavender .bottom .one-third {
+    gap: clamp(122px, 12.842vw, 244px);
+}
+
+.lavender .bottom .one-third .title{
+    font-size: clamp(13px, 1.368vw, 26px);
+    font-weight: 800;
+    margin-bottom: clamp(15px, 1.579vw, 30px);
+}
+
+.lavender .bottom .one-third .check{
+    display: flex;
+    align-items: center;
+    gap: clamp(5px, 0.526vw, 10px);
+    font-size: clamp(10px, 1.053vw, 20px);
+}
+
+.lavender .bottom .one-third .check img {
+    width: clamp(15px, 1.579vw, 30px);
+}
+
+.lavender .bottom .one-third .tags{
+    font-size: clamp(8px, 0.842vw, 16px);
+    font-weight: 700;
+    display: flex;
+}
+
+.lavender .bottom .one-third .tags .dairy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: clamp(20px, 2.105vw, 40px);
+    background-color: #F2E9FB;
+    height: clamp(20px, 2.105vw, 40px);
+    width: clamp(50px, 5.263vw, 100px);
+}
+.lavender .bottom .one-third .tags .treenuts{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: clamp(20px, 2.105vw, 40px);
+    background-color: #F2E9FB;
+    height: clamp(20px, 2.105vw, 40px);
+    width: clamp(230px, 24.211vw, 460px);
+}
+
+.lavender .bottom .one-third .attribute{
+    display: flex;
+    flex-direction: column;
+    margin-top: clamp(5px, 0.526vw, 10px);
+    margin-bottom: clamp(9px, 0.947vw, 18px);
+}
+
+.lavender .bottom .one-third .attribute .label{
+    display: flex;
+    justify-content: space-between;
+    gap: clamp(170px, 17.895vw, 340px);
+    font-size: clamp(9px, 0.947vw, 18px);
+    font-weight: 700;
+}
+
+.lavender .bottom .one-third .attribute .progbar{
+    width: clamp(250px, 26.316vw, 500px);           /* Fixed width */
+    height: clamp(5px, 0.526vw, 10px);           /* Height of the bar */
+    background-color: #e0e0e0; /* Light gray background */
+    border-radius: clamp(12px, 1.263vw, 24px);    /* Rounded corners */
+    overflow: hidden;       /* Hide overflow */
+}
+
+.lavender .bottom .one-third .attribute .progbar-inner1{
+    height: 100%;
+    width: 70%;             /* Fixed percentage */
+    background-color: #FEE440; /* yellow fill */
+}
+
+.lavender .bottom .one-third .attribute .progbar-inner2{
+    height: 100%;
+    width: 90%;             /* Fixed percentage */
+    background-color: #FEE440; /* yellow fill */
+}
+
+.lavender .bottom .one-third .attribute .progbar-inner3{
+    height: 100%;
+    width: 85%;             /* Fixed percentage */
+    background-color: #FEE440; /* yellow fill */
+}
+
+.lavender .bottom .one-third .attribute .progbar-inner4{
+    height: 100%;
+    width: 55%;             /* Fixed percentage */
+    background-color: #FEE440; /* yellow fill */
+}
+
+/*----------------- elevate specific overrides ------------------*/
+.img-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.img-container img {
+    width: 100%;
+}
+
+.elevate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: clamp(200px, 21.053vw, 400px);
+    background-color: #BDE9D1;
+    gap: clamp(50px, 5.263vw, 100px);
+    margin-top: clamp(-40px, -2.105vw, -20px);
+    padding-bottom: clamp(20px, 2.105vw, 40px);
+
+    font-family: "Lexend Deca", sans-serif;
+    font-style: normal;
+}
+
+.elevate .left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(5px, 0.526vw, 10px);
+}
+
+/* makes the children of .elevate .left have a margin of 0 */
+.elevate .left > *{
+    margin: 0;
+}
+
+.elevate .left .subtext {
+    font-size: clamp(10px, 1.053vw, 20px);
+    font-weight: 700;
+}
+
+.elevate .left .heading {
+    font-size: clamp(32px, 3.368vw, 64px);
+}
+
+.elevate .right {
+    display:flex;
+    gap: clamp(20px, 2.105vw, 40px);
+}
+
+.elevate .right .image-pair {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: clamp(14px, 1.474vw, 28px);
+    font-weight: 700;
+}
+
+.elevate .right .image-pair img {
+    width: clamp(100px, 10.526vw, 200px);
+}
+
+/*----------------- explore specific overrides ------------------*/
+
+.explore{
+    min-height: clamp(550px, 57.895vw, 1100px);
+    background-color: #F2E9FB;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(35px, 3.684vw, 70px);
+
+    font-family: "Lexend Deca", sans-serif;
+    font-style: normal;
+    align-items: center;
+    justify-content: center;
+}
+
+.explore .subheading{
+    margin-bottom: clamp(-60px, -3.158vw, -30px);
+    font-size: clamp(9px, 0.947vw, 18px);
+    font-weight: 700;
+}
+
+.explore .heading{
+    margin: 0;
+    font-size: clamp(32px, 3.368vw, 64px);
+}
+
+.explore .card-container {
+    display: flex;
+    gap: clamp(40px, 4.211vw, 80px);
+}
+
+.explore .card-container .card{
+    background-color:white;
+    justify-content: center;
+    text-align: center;
+    padding-top: clamp(10px, 1.053vw, 20px);
+    border-radius: clamp(20px, 2.105vw, 40px);
+    width: clamp(220px, 23.158vw, 440px);
+}
+
+.explore .card-container .card img {
+    width: clamp(200px, 21.053vw, 400px);
+}
+
+.explore .card-container .card .card-labels{
+    text-align: left;
+    margin-left: clamp(15px, 1.579vw, 30px);
+    margin-top: clamp(5px, 0.526vw, 10px);
+    font-size: clamp(15px, 1.579vw, 30px);
+}
+
+.explore .card-container .card .card-descriptions{
+    text-align: left;
+    margin-left: clamp(15px, 1.579vw, 30px);
+    margin-top: clamp(-20px, -1.053vw, -10px);
+    margin-bottom: clamp(20px, 2.105vw, 40px);
+    font-size: clamp(9px, 0.947vw, 18px);
+    line-height: clamp(14px, 1.474vw, 28px);
+}
+
+/*----------------- footer specific overrides ------------*/
+
+.footer-section{
+    background-color: #4A2C2A;
+    font-family: "Lexend Deca", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: white;
+
+}
+.footer {
+    display: flex;
+    gap: clamp(350px, 36.842vw, 700px);
+    padding-left: clamp(50px, 5.263vw, 100px);
+    padding-top: clamp(30px, 3.158vw, 60px);
+    min-height: clamp(150px, 15.789vw, 300px);
+}
+
+.footer .left-section{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer .left-section .heading{
+    display: flex;
+    align-items: center;
+    gap: clamp(10px, 1.053vw, 20px);
+    font-size: clamp(13px, 1.368vw, 26px);
+}
+
+.footer .left-section .heading img {
+    width: clamp(30px, 3.158vw, 60px);
+}
+
+.footer .left-section .description{
+    font-size: clamp(10px, 1.053vw, 20px);
+    line-height: clamp(20px, 2.105vw, 40px);
+}
+
+.footer .left-section .socials{
+    display: flex;
+    gap: clamp(18px, 1.895vw, 36px);
+    margin-top: clamp(9px, 0.947vw, 18px);
+}
+
+.footer .left-section .socials img {
+    width: clamp(15px, 1.579vw, 30px);
+}
+
+.footer .right-section{
+    display: flex;
+    gap: clamp(50px, 5.263vw, 100px);
+    font-size: clamp(9px, 0.947vw, 18px);
+}
+
+.footer .right-section .heading{
+    color: #FEE440;
+    font-size: clamp(11px, 1.158vw, 22px);
+}
+
+.footer-section .footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* subtle line, matches dark bg */
+    padding-top: clamp(15px, 1.579vw, 30px);
+    margin-top: clamp(25px, 2.632vw, 50px);
+    padding-bottom: clamp(25px, 2.632vw, 50px);
+    display: flex;
+    justify-content: space-evenly;
+    gap: clamp(500px, 52.632vw, 1000px);
+    align-items: center;
+
+    font-size: clamp(8px, 0.842vw, 16px);
+}
+
+@media (max-width: 760px) {
+    .navigation,
+    .lavender .top,
+    .lavender .bottom,
+    .elevate,
+    .explore .card-container,
+    .footer,
+    .footer .right-section,
+    .footer-section .footer-bottom {
+        flex-wrap: wrap;
+    }
+
+    .navigation {
+        gap: clamp(20px, 8vw, 60px);
+        justify-content: center;
+        padding: 15px 20px;
+    }
+
+    .navigation .navbar ul,
+    .lavender .bottom,
+    .footer-section .footer-bottom {
+        gap: clamp(16px, 5vw, 40px);
+    }
+
+    .lavender .top {
+        gap: clamp(24px, 8vw, 80px);
+        padding: 45px 24px;
+        text-align: center;
+    }
+
+    .lavender .top .text {
+        align-items: center;
+    }
+
+    .lavender .bottom {
+        align-items: flex-start;
+        padding: 34px 24px;
+    }
+
+    .elevate {
+        padding: 32px 24px;
+    }
+
+    .explore {
+        padding: 48px 24px;
+    }
+
+    .footer {
+        gap: 28px;
+        padding: 32px 24px 0;
+    }
+}
