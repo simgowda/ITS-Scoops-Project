@@ -501,7 +501,8 @@ img {
 
 .scoop-rewards .card-container {
     display: flex;
-    
+    flex: 0 1 clamp(320px, 42vw, 560px);
+    max-width: 100%;
 }
 
 .scoop-rewards .card-container .card{
@@ -509,16 +510,12 @@ img {
     border-radius: 30px;
     box-shadow: 0 clamp(4px, 0.421vw, 8px) clamp(8px, 0.842vw, 16px) rgba(0,0,0,0.1);
     overflow: hidden;
-    min-width: 450px;
-    /*min-height: clamp(270px, 28.421vw, 300px); */
-    width: 100%;
-    min-height: 220px;
-    max-height: 450px;
-    margin-right: 20px;
+    width: clamp(320px, 42vw, 560px);
+    max-width: 100%;
     
     margin-top: clamp(70px, 7.368vw, 140px);
     margin-left: 30px;
-    margin-right: clamp(0px, 7.368vw, 100px);
+    margin-right: 30px;
     margin-bottom: clamp(70px, 7.368vw, 140px);
 }
 
@@ -550,8 +547,16 @@ img {
 
 .scoop-rewards .card-container .card .card-content .card-heading .subtext{
     font-size: clamp(8px, 0.842vw, 16px);
-    margin-left: clamp(40px, 4.211vw, 80px);
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
     margin-top: clamp(20px, 2.105vw, 40px);
+    margin-bottom: clamp(20px, 2.105vw, 30px);
+}
+
+.scoop-rewards .card-container .card .card-content .card-heading:last-child {
+    justify-content: center;
+    margin-right: 0;
 }
 
 .scoop-rewards .card-container .card .card-row img {
@@ -562,20 +567,21 @@ img {
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* vertical alignment */
-    padding-top: clamp(80px, 8.421vw, 160px);
-    justify-content: flex-start; /* horizontal alignment */
-    padding-left: clamp(60px, 6.316vw, 120px);
+    margin-top: 0;
+    justify-content: center; /* vertical alignment */
+    margin-left: clamp(60px, 6.316vw, 120px);
     text-align: left;
     min-height: clamp(320px, 33.684vw, 640px);
-    flex: 1 1 clamp(420px, 44.211vw, 840px);
+    /*flex: 1 1 clamp(420px, 44.211vw, 840px);*/
 }
 
 .scoop-rewards{
     display: flex;
-    flex-wrap: wrap;
+    
     justify-content: center;
     background-color: #F2E9FB;
     min-height: clamp(500px, 46.316vw, 800px);
+    gap: clamp(10px, 1vw, 60px);
 }
 
 /*----------------- smile specific overrides ------------*/
