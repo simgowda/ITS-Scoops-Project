@@ -729,9 +729,13 @@ img {
 @media (max-width: 900px) {
 
     .navigation {
+        flex-wrap: wrap;
         justify-content: center;
-        gap: clamp(20px, 8vw, 60px);
+        gap: clamp(20px, 4vw, 50px);
         padding: 15px 20px;
+    }
+    .navigation .navbar ul{
+        gap: clamp(16px, 5vw, 40px);
     }
 
     .serving-sunshine {
