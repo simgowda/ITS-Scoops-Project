@@ -81,7 +81,6 @@ img {
     display: flex;
     /*flex-wrap: wrap;*/
     font-family: "Lexend Deca", sans-serif;
-    font-optical-sizing: auto;
     font-style: normal;
     gap: clamp(10px, 26.316vw, 500px);
     padding: clamp(10px, 1.579vw, 30px) clamp(30px, 3.158vw, 60px);
@@ -265,6 +264,7 @@ img {
     text-align: left;
     font-size: clamp(11px, 1.158vw, 22px);
     margin-left: clamp(15px, 1.579vw, 30px);
+    margin-right: clamp(15px, 1.579vw, 30px);
 }
 
 .flavors .card-container .card .card-content .card-labels{
@@ -409,10 +409,11 @@ img {
     flex-wrap: wrap;
     gap: clamp(20px, 2.105vw, 40px);
     text-align: left;
-    margin-top: clamp(30px, 3.158vw, 60px);
+    margin-top: clamp(25px, 3.158vw, 60px);
     align-items: stretch;
     justify-content: center;
     width: 100%;
+    margin-bottom: clamp(30px, 3vw, 50px);
 }
 
 .fanfaves .card-container .card{
@@ -432,7 +433,7 @@ img {
 }
 
 .fanfaves .card-container .card .image-star img {
-    width: clamp(10px, 1.053vw, 20px);
+    width: clamp(10px, 1.053vw, 40px);
 }
 
 .fanfaves .card-container .card .card-content{
@@ -444,6 +445,7 @@ img {
     text-align: left;
     font-size: clamp(11px, 1.158vw, 22px);
     margin-left: clamp(15px, 1.579vw, 30px);
+    margin-right: clamp(15px, 1.579vw, 30px);
     margin-bottom: clamp(5px, 0.526vw, 10px);
     flex-grow: 1;
 }
@@ -542,11 +544,11 @@ img {
 }
 
 .scoop-rewards .card-container .card .card-content .card-heading .side-text{
-    font-size: clamp(9px, 0.947vw, 18px);
+    font-size: clamp(10px, 1vw, 18px);
 }
 
 .scoop-rewards .card-container .card .card-content .card-heading .subtext{
-    font-size: clamp(8px, 0.842vw, 16px);
+    font-size: clamp(10px, 1vw, 16px);
     text-align: center;
     width: 100%;
     margin-left: 0;
@@ -724,7 +726,7 @@ img {
     font-size: clamp(8px, 0.842vw, 16px);
 }
 
-
+/* min size for accessaility is 16 to 18*/
     /* media queries for responsive design */
 @media (max-width: 900px) {
 
@@ -733,9 +735,18 @@ img {
         justify-content: center;
         gap: clamp(20px, 4vw, 50px);
         padding: 15px 20px;
+        
+    }
+    .navigation .navbar {
+        width: 100%;
     }
     .navigation .navbar ul{
         gap: clamp(16px, 5vw, 40px);
+        justify-content: center;
+    }
+
+    .navigation .navbar .button {
+        width: clamp(150px, 15vw, 250px)
     }
 
     .serving-sunshine {
@@ -748,10 +759,19 @@ img {
         padding-bottom: 32px;
         
     }
+    .serving-sunshine .description {
+        line-height: 16px;
+    }
 
     .serving-sunshine .buttons{
         justify-content: center; 
         padding-bottom: 50px;
+        
+    }
+
+    .serving-sunshine .buttons .btn,
+    .serving-sunshine .buttons .btn2 {
+        width: clamp(200px, 15vw, 300px);
     }
 
     .serving-sunshine .image img {
@@ -761,6 +781,10 @@ img {
         padding-top: clamp(25px, 10vw, 40px);
     }
 
+    .flavors .card-container .card .card-content .card-descriptions{
+        line-height: 18px;
+    }
+
     .churned .text{
         padding-bottom: 30px;
         
@@ -768,6 +792,7 @@ img {
 
     .churned .text .description {
         text-align: center;
+        line-height: 18px;
     }
 
     .churned .image {
@@ -783,10 +808,23 @@ img {
 
     .churned .tips {
         justify-content: center;
+        font-size: clamp(14px, 3vw, 17px);
     }
 
     .churned .main.headers {
         margin-bottom: 10px;
+    }
+
+    .peach .text .description {
+        line-height: 16px;
+    }
+
+    .fanfaves .card-container .card .image-star{
+        margin-left: clamp(15px, 1.2vw, 20px);
+    }
+
+    .fanfaves .card-container .card .image-star img {
+        width: clamp(15px, 2vw, 40px);
     }
 
     .rewards {
@@ -808,9 +846,29 @@ img {
         margin-top: clamp(5px, 0.2vw, 10px);
         margin-bottom: clamp(70px, 7.368vw, 140px);
     }
+    .scoop-rewards .card-container .card .card-content .card-heading{
+        font-size: clamp(14px, 3vw, 17px);
+    }
+    .scoop-rewards .card-container .card .card-content .card-heading .side-text{
+        text-align: right;
+    }
 
     .rewards .reqs {
         justify-content: center;
+    }
+
+    .rewards .description{
+        margin-top: 8px;
+        line-height: 18px;
+    }
+
+    .rewards .buttons .btn{
+        width: clamp(200px, 15vw, 300px);
+        font-size: clamp(14px, 3vw, 17px);
+    }
+
+    .rewards .reqs{
+        font-size: clamp(14px, 3vw, 17px);
     }
 
     .rewards {
@@ -831,9 +889,12 @@ img {
     .smile .locations {
         text-align: center;
         margin-bottom: clamp(20px, 2vw, 30px);
-
+        line-height: 16px;
         margin-left: 0;
     
+    }
+    .smile .directions{
+        margin-bottom: clamp(20px, 2vw, 30px);
     }
     .smile .image {
         margin-top: 0;
@@ -850,13 +911,55 @@ img {
         justify-content: center;
     }
 
+    .footer .right-section{
+        gap: clamp(25px, 4vw, 50px); 
+    }
+
     .footer-section .footer-bottom {
         gap: clamp(16px, 5vw, 40px);
         justify-content: center;
     }
 
+    /* Keep supporting text readable on tablet and smaller screens. */
+    .pretext,
+    .description,
+    .navigation .navbar ul,
+    .serving-sunshine .buttons .btn,
+    .serving-sunshine .buttons .btn2,
+    .flavors .card-container .card .card-content,
+    .flavors .card-container .card .card-content .card-descriptions,
+    .churned .text,
+    .peach .text .pretext,
+    .fanfaves .card-container .card .card-content,
+    .fanfaves .card-container .card .card-content .card-subtext,
+    .rewards .description,
+    .scoop-rewards .card-container .card .card-content,
+    .scoop-rewards .card-container .card .card-content .card-heading .side-text,
+    .scoop-rewards .card-container .card .card-content .card-heading .subtext,
+    .smile .locations .address,
+    .smile .locations .directions,
+    .footer .left-section .description,
+    .footer .right-section,
+    .footer-section .footer-bottom {
+        font-size: clamp(16px, 2vw, 18px);
+    }
+
+    /* Preserve a clear type hierarchy above the supporting copy. */
+    .navigation .heading,
+    .flavors .card-container .card .card-content .card-labels,
+    .smile .locations .location,
+    .footer .right-section .heading {
+        font-size: clamp(20px, 2.8vw, 26px);
+    }
+
+    .main.headers {
+        font-size: clamp(34px, 6vw, 48px);
+    }
+
+    .peach .main.headers {
+        font-size: clamp(40px, 7vw, 54px);
+    }
+
 
 
 }
-
-
