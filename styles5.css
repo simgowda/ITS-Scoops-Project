@@ -560,7 +560,7 @@ img {
 }
 
 .scoop-rewards .card-container .card .card-row img {
-    width: clamp(50px, 5.263vw, 100px);
+    width: clamp(65px, 5.263vw, 100px);
 }
 
 .rewards {
@@ -581,7 +581,7 @@ img {
     justify-content: center;
     background-color: #F2E9FB;
     min-height: clamp(500px, 46.316vw, 800px);
-    gap: clamp(10px, 1vw, 60px);
+    gap: clamp(10px, 3vw, 60px);
 }
 
 /*----------------- smile specific overrides ------------*/
@@ -660,7 +660,7 @@ img {
 
 .footer {
     display: flex;
-    flex-wrap: wrap;
+    
     gap: clamp(120px, 36.842vw, 700px);
     padding-left: clamp(50px, 5.263vw, 100px);
     padding-top: clamp(30px, 3.158vw, 60px);
@@ -724,58 +724,21 @@ img {
     font-size: clamp(8px, 0.842vw, 16px);
 }
 
-@media (max-width: 900px) {
-    .navigation,
-    .serving-sunshine,
-    .churned,
-    .scoop-rewards,
-    .smile,
-    .footer,
-    .footer-section .footer-bottom {
-        justify-content: center;
-    }
-
-    .serving-sunshine,
-    .churned,
-    .smile {
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-    .navigation {
-        gap: clamp(20px, 8vw, 60px);
-        padding: 15px 20px;
-    }
-
-    .serving-sunshine,
-    .churned,
-    .peach,
-    .fanfaves,
-    .scoop-rewards,
-    .smile {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-
-    .smile .locations,
-    .smile .image {
-        margin-left: 0;
-        margin-top: 0;
-        padding-left: 0;
-    }
-
-    .footer {
-        gap: 40px;
-        padding-right: 24px;
-    }
-
-
 
     /* media queries for responsive design */
 @media (max-width: 900px) {
 
+    .navigation {
+        justify-content: center;
+        gap: clamp(20px, 8vw, 60px);
+        padding: 15px 20px;
+    }
+
     .serving-sunshine {
+        justify-content: center;
         flex-direction: column-reverse;
+        flex-wrap: wrap;
+        text-align: center;
         gap: clamp(30px, 1vw, 40px);
         /*max-height: 1000px;*/
         padding-bottom: 32px;
@@ -808,7 +771,10 @@ img {
     }
 
     .churned {
+        justify-content: center;
         gap: clamp(10px, 2vw, 60px);
+        flex-wrap: wrap;
+        text-align: center;
     }
 
     .churned .tips {
@@ -825,16 +791,68 @@ img {
     }
 
     .scoop-rewards {
+        justify-content: center;
         align-items: center;
-        padding-right: 0px;
+        padding-right: 15px;
+        padding-left: 15px;
         margin-right: 0;
-        
+        flex-wrap: wrap;
+        gap: clamp(5px, 0.4vw, 10px);
     }
 
+    .scoop-rewards .card-container .card {
+        margin-top: clamp(5px, 0.2vw, 10px);
+        margin-bottom: clamp(70px, 7.368vw, 140px);
+    }
+
+    .rewards .reqs {
+        justify-content: center;
+    }
+
+    .rewards {
+        margin-left: 0px;
+    }
+
+
+    .smile {
+        align-items: center;
+        padding-top: clamp(20px, 2vw, 30px);
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .smile .locations {
+        text-align: center;
+        margin-bottom: clamp(20px, 2vw, 30px);
+
+        margin-left: 0;
     
+    }
+    .smile .image {
+        margin-top: 0;
+        padding-left: 0;
+    }
+
+    .footer {
+        gap: clamp(40px, 20vw, 500px);
+        padding-left: clamp(25px, 2vw, 40px);
+        justify-content: center;
+    }
+
+    .footer-section {
+        justify-content: center;
+    }
+
+    .footer-section .footer-bottom {
+        gap: clamp(16px, 5vw, 40px);
+        justify-content: center;
+    }
 
 
 
 }
 
-}
+
