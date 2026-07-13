@@ -926,8 +926,9 @@ img {
 
     .footer-section .footer-bottom {
         gap: clamp(16px, 5vw, 40px);
-        
         justify-content: center;
+        margin: 50px 5px 0 5px;
+        text-align: center;
     }
 
     /* Keep supporting text readable on tablet and smaller screens. */
