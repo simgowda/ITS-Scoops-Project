@@ -78,8 +78,9 @@ img {
     font-family: "Lexend Deca", sans-serif;
     font-style: normal;
     gap: clamp(250px, 26.316vw, 500px);
-    padding-left: clamp(30px, 3.158vw, 60px);
+    padding: clamp(10px, 1.579vw, 30px) clamp(30px, 3.158vw, 60px);
     align-items: center;
+    justify-content: space-between;
     background-color:#FFf;
 }
 
@@ -96,6 +97,7 @@ img {
 
 .navigation .navbar ul {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: clamp(30px, 3.158vw, 60px);
     font-size: clamp(11px, 1.158vw, 22px);
@@ -129,6 +131,7 @@ img {
     justify-content: center;
     gap: clamp(120px, 12.632vw, 240px);
     min-height: clamp(500px, 52.632vw, 1000px);
+    padding: clamp(10px, 1.579vw, 30px) clamp(30px, 3.158vw, 60px);
     background-color:#FFF;
 }
 
@@ -358,6 +361,7 @@ img {
     display:flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     font-size: clamp(14px, 1.474vw, 28px);
     font-weight: 700;
 }
@@ -404,6 +408,12 @@ img {
     padding-top: clamp(10px, 1.053vw, 20px);
     border-radius: clamp(20px, 2.105vw, 40px);
     width: clamp(220px, 23.158vw, 440px);
+    
+}
+
+.explore .card-container .card .card-content{
+    margin-left: clamp(15px, 1.579vw, 30px);
+    margin-right: clamp(15px, 1.579vw, 30px);
 }
 
 .explore .card-container .card img {
@@ -412,14 +422,13 @@ img {
 
 .explore .card-container .card .card-labels{
     text-align: left;
-    margin-left: clamp(15px, 1.579vw, 30px);
+    
     margin-top: clamp(5px, 0.526vw, 10px);
     font-size: clamp(15px, 1.579vw, 30px);
 }
 
 .explore .card-container .card .card-descriptions{
     text-align: left;
-    margin-left: clamp(15px, 1.579vw, 30px);
     margin-top: clamp(-20px, -1.053vw, -10px);
     margin-bottom: clamp(20px, 2.105vw, 40px);
     font-size: clamp(9px, 0.947vw, 18px);
@@ -493,6 +502,7 @@ img {
     margin-top: clamp(25px, 2.632vw, 50px);
     padding-bottom: clamp(25px, 2.632vw, 50px);
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     gap: clamp(500px, 52.632vw, 1000px);
     align-items: center;
@@ -513,8 +523,16 @@ img {
         justify-content: center;
         padding: 15px 20px;
     }
+    .navigation .navbar {
+        width: 100%;
+    }
     .navigation .navbar ul{
         gap: clamp(16px, 5vw, 40px);
+        justify-content: center;
+    }
+
+    .navigation .navbar .button {
+        width: clamp(150px, 18vw, 250px);
     }
 
     .lavender .top {
@@ -526,6 +544,16 @@ img {
     .lavender .top .text {
         align-items: center;
     }
+    .lavender .top .text p{
+        line-height: 18px;
+    }
+    .lavender .top .text .highlighted{
+        width: clamp(350px, 21.053vw, 400px);
+    }
+
+    .lavender .top .text .buttons .button{
+        width: clamp(150px, 12.632vw, 240px);
+    }
 
     .lavender .bottom {
         flex-wrap: wrap;
@@ -533,6 +561,24 @@ img {
         align-items: flex-start;
         padding: 35px 25px; /* top/bottom left/right*/
     }
+    .lavender .bottom .one-third{
+        text-align: center;
+    }
+    .lavender .bottom .one-third .tags {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+    .lavender .bottom .one-third .tags .dairy{
+        width: clamp(70px, 10vw, 300px);
+        
+    }
+    .lavender .bottom .one-third .tags .treenuts{
+        width: clamp(450px, 18vw, 730px);
+        
+        text-align: center;
+    }
+
 
     .elevate {
         flex-wrap: wrap;
@@ -545,6 +591,10 @@ img {
     .explore .card-container {
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .explore .card-container .card .card-content .card-descriptions{
+        line-height: 16px;
     }
 
     
@@ -561,6 +611,59 @@ img {
     .footer-section .footer-bottom {
         gap: clamp(16px, 5vw, 40px);
         justify-content: center;
+    }
+
+    .footer .right-section{
+        gap: clamp(25px, 4vw, 50px); 
+    }
+
+    .footer .right-section .one-third .subtext{
+        margin: 5px;
+    }
+
+    .footer-bottom{
+        margin: 5px;
+        text-align: center;
+    }
+
+    /* Keep supporting text readable on tablet and smaller screens. */
+    .pretext,
+    .description,
+    .navigation .navbar ul,
+    .lavender .top .text .highlighted,
+    .lavender .top .text .buttons .button,
+    .lavender .bottom .one-third .check,
+    .lavender .bottom .one-third .tags,
+    .lavender .bottom .one-third .attribute,
+    .elevate .left .subtext,
+    .explore .subheading,
+    .explore .card-container .card .card-descriptions,
+    .footer .left-section .description,
+    .footer .right-section,
+    .footer-section .footer-bottom {
+        font-size: clamp(16px, 2vw, 18px);
+    }
+
+    /* Preserve a clear type hierarchy above the supporting copy. */
+    .navigation .heading,
+    .lavender .top .text .subtext,
+    .lavender .top .text .buttons .price,
+    .lavender .bottom .one-third .title,
+    .elevate .right .image-pair,
+    .explore .card-container .card .card-labels,
+    .footer .right-section .heading {
+        font-size: clamp(20px, 2.8vw, 26px);
+    }
+
+    .main.headers,
+    .elevate .left .heading,
+    .explore .heading {
+        font-size: clamp(34px, 6vw, 48px);
+    }
+
+    .lavender .top .text .main-header {
+        font-size: clamp(52px, 9vw, 72px);
+        line-height: 1.05;
     }
 
 

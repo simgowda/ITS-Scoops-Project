@@ -746,7 +746,7 @@ img {
     }
 
     .navigation .navbar .button {
-        width: clamp(150px, 15vw, 250px)
+        width: clamp(150px, 15vw, 250px);
     }
 
     .serving-sunshine {
@@ -853,6 +853,9 @@ img {
         text-align: right;
     }
 
+    .rewards .text .pretext {
+        padding-top: clamp(20px, 5vw, 40px);
+    }
     .rewards .reqs {
         justify-content: center;
     }
@@ -913,10 +916,17 @@ img {
 
     .footer .right-section{
         gap: clamp(25px, 4vw, 50px); 
+        
+    }
+
+    .footer .right-section .one-third .subtext{
+        margin: 5px;
+        
     }
 
     .footer-section .footer-bottom {
         gap: clamp(16px, 5vw, 40px);
+        
         justify-content: center;
     }
 
